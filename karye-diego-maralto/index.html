@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2a0506">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Proposta de reforma da Dia de Obra Construtora para o apartamento no Cond. Maralto, com projeto de Vanessa Santos Azevedo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Dia de Obra Construtora">
+<meta property="og:title" content="Reforma do apartamento no Maralto · Dia de Obra">
+<meta property="og:description" content="Investimento estimado da reforma, com base no projeto executivo de Vanessa Santos Azevedo.">
+<meta property="og:url" content="https://ribaznn.github.io/propostas/karye-diego-maralto/">
+<meta property="og:image" content="https://ribaznn.github.io/propostas/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<link rel="icon" type="image/svg+xml" href="../assets/icon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap">
+<title>Reforma no Maralto · Dia de Obra</title>
+<style>
+/* Layout: coluna única no estilo iOS do app Dia de Obra (até 760px), barra de seções em vidro fixa no topo,
+   cartões sólidos sobre o papel de parede vermelho-escuro. Tema escuro único, como o app.
+   A arquiteta aparece com a própria marca e uma serifa no nome, ao lado da Dia de Obra. */
+:root{
+  color-scheme:dark;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI Variable Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --brand:#dd0000;
+  --cream:#fcf1d5;
+  --tint:#ff453a;
+  --bg:#2a0506;
+  --label:#f5f5f7;
+  --label-2:rgba(235,235,245,.68);
+  --label-3:rgba(235,235,245,.44);
+  --separator:rgba(255,255,255,.1);
+  --card:rgba(30,20,21,.88);
+  --card-edge:inset 0 0 0 .5px rgba(255,255,255,.09),0 18px 40px -26px rgba(0,0,0,.9);
+  --fill-2:rgba(118,118,128,.16);
+  --green:#30d158;
+  --orange:#ff9f0a;
+  --blue:#64d2ff;
+  --concrete:#a39d96;
+  --stone:#c9a27e;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --spring:cubic-bezier(.2,.9,.25,1.06);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;min-height:100dvh;background:var(--bg);color:var(--label);font-family:var(--font);font-size:16px;line-height:1.55;font-synthesis:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2,h3,h4,p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid #0a84ff;outline-offset:3px}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.wm-dia,.wm-tag{fill:var(--wm-dia,currentColor)}.wm-obra{fill:var(--wm-obra,currentColor)}
+.mg-d{fill:var(--mg-d,currentColor)}.mg-o{fill:var(--mg-o,currentColor)}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.num{font-variant-numeric:tabular-nums}
+
+/* Papel de parede do app */
+.wallpaper{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(85% 55% at 10% 10%,rgba(186,0,0,.85) 0%,rgba(186,0,0,0) 70%),radial-gradient(90% 70% at 100% 100%,#000 0%,rgba(0,0,0,0) 70%),linear-gradient(176deg,#2a0506 0%,#3b0405 26%,#1c0304 60%,#0a0203 100%)}
+.wallpaper::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,4,5,.25),rgba(8,3,4,.7) 45%)}
+.glow{position:absolute;border-radius:50%}
+.glow-a{width:80vmax;height:80vmax;left:-32vmax;top:-34vmax;background:radial-gradient(closest-side,rgba(252,241,213,.12),rgba(252,241,213,0))}
+.glow-c{width:50vmax;height:50vmax;right:-8vmax;top:-16vmax;background:radial-gradient(closest-side,rgba(255,59,48,.26),rgba(255,59,48,0))}
+@media(prefers-reduced-motion:no-preference){.glow-a{animation:drift-a 26s ease-in-out infinite alternate}.glow-c{animation:drift-c 38s ease-in-out infinite alternate}}
+@keyframes drift-a{to{transform:translate(12vmax,8vmax) scale(1.1)}}
+@keyframes drift-c{to{transform:translate(-14vmax,10vmax) scale(.9)}}
+
+.page{position:relative;z-index:1;max-width:760px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:0 56px;overflow-x:clip}
+
+/* Barra de seções em vidro */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;gap:6px;margin:10px -6px 0;padding:6px;border-radius:22px;background:rgba(34,20,21,.58);-webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);box-shadow:0 20px 50px -20px rgba(0,0,0,.85),inset 0 1px 1px rgba(255,255,255,.18),inset 0 0 0 .5px rgba(255,255,255,.12)}
+.app-icon{--mg-d:#000;--mg-o:var(--cream);flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0) 55%),var(--brand);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 6px 14px -6px rgba(221,0,0,.8)}
+.app-icon svg{width:auto;height:62%}
+.chips{flex:1;min-width:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent)}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;display:grid;place-items:center;min-height:40px;padding:0 13px;border-radius:13px;font-size:14px;font-weight:500;color:var(--label-2);text-decoration:none;white-space:nowrap;transition:background-color .25s,color .2s}
+.chips a:last-child{margin-right:18px}
+.chips a[aria-current=true]{color:var(--label);font-weight:600;background:rgba(255,255,255,.15);box-shadow:inset 0 .5px 0 rgba(255,255,255,.2)}
+
+/* Abertura: as duas marcas lado a lado */
+.hero{position:relative;isolation:isolate;display:grid;gap:16px;padding:36px 4px 4px}
+.partners{display:flex;align-items:center;gap:14px}
+.partners .wordmark{--wm-dia:var(--cream);--wm-obra:var(--cream);flex:none;display:block;width:104px;height:auto;aspect-ratio:2000/1073;filter:drop-shadow(0 10px 24px rgba(0,0,0,.4))}
+.partners .divider{flex:none;align-self:stretch;width:1px;min-height:44px;background:linear-gradient(rgba(252,241,213,0),rgba(252,241,213,.4),rgba(252,241,213,0))}
+.vz{display:flex;align-items:center;gap:10px;min-width:0}
+.vz img{flex:none;display:block;height:36px;width:auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,.45))}
+.vz-name{display:grid;gap:3px;line-height:1.05;min-width:0}
+.vz-name strong{font-family:var(--serif);font-size:18px;font-weight:600;letter-spacing:.01em;color:var(--cream);text-wrap:balance}
+.vz-name span{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--label-3)}
+@media(min-width:480px){.partners{gap:18px}.partners .wordmark{width:128px}.vz img{height:44px}.vz-name strong{font-size:21px}}
+.eyebrow{font-size:12.5px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--tint)}
+.hero h1{font-size:clamp(32px,8.6vw,48px);line-height:1.05;font-weight:750;letter-spacing:-.028em;text-wrap:balance}
+.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:600;letter-spacing:-.01em;color:var(--cream)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;color:var(--cream);background:rgba(252,241,213,.1)}
+.tag .i{width:15px;height:15px}
+.lead{max-width:60ch;font-size:17px;line-height:1.55;color:var(--label-2)}
+.lead strong{color:var(--label);font-weight:600}
+.hero-mark{position:absolute;z-index:-1;top:18px;right:-6px;width:min(54vw,240px);height:auto;overflow:visible;fill:none;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.hero-mark .mark-base path{stroke:rgba(252,241,213,.16);stroke-width:2.2;stroke-dasharray:1 1;stroke-dashoffset:0}
+.hero-mark .mark-trace{opacity:0}
+.hero-mark .mark-trace path{stroke:#ffe7d6;stroke-width:3.2;stroke-dasharray:.09 .91;stroke-dashoffset:1}
+
+/* Seções */
+.sec{display:grid;gap:14px;padding-top:44px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 70px)}
+.sec.tight{padding-top:22px}
+.sec-head{display:grid;gap:6px;padding:0 4px 2px}
+.sec-head h2{font-size:clamp(26px,6.4vw,32px);line-height:1.12;font-weight:750;letter-spacing:-.022em;text-wrap:balance}
+.sec-head p{max-width:62ch;color:var(--label-2)}
+.caption{padding:0 6px;font-size:13px;line-height:1.45;color:var(--label-3)}
+.caption.flush{padding:0}
+.card{display:grid;gap:14px;padding:18px;border-radius:22px;background:var(--card);box-shadow:var(--card-edge);min-width:0}
+.card h3{font-size:19px;line-height:1.25;font-weight:680;letter-spacing:-.012em;text-wrap:balance}
+.card p{color:var(--label-2)}
+.kicker{font-size:12px;font-weight:650;letter-spacing:.07em;text-transform:uppercase;color:var(--label-3)}
+.grid-2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+
+/* Lista no estilo iOS */
+.list{list-style:none;margin:0;padding:0;border-radius:22px;background:var(--card);box-shadow:var(--card-edge);overflow:hidden}
+.list>li{position:relative}
+.list>li+li::before{content:"";position:absolute;top:0;left:74px;right:0;height:1px;background:var(--separator);transform:scaleY(.5)}
+.row{display:flex;align-items:center;gap:14px;min-height:72px;padding:12px 16px}
+.row.top{align-items:flex-start}
+.tile{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:12px}
+.tile .i{width:22px;height:22px}
+.tile.soft{color:var(--tint);background:rgba(255,69,58,.14);box-shadow:inset 0 0 0 .5px rgba(255,69,58,.25)}
+.tile.cream{color:var(--cream);background:rgba(252,241,213,.1);box-shadow:inset 0 0 0 .5px rgba(252,241,213,.22)}
+.row-text{flex:1;min-width:0;display:grid;gap:2px}
+.row-title{font-size:16px;font-weight:600;line-height:1.3}
+.row-sub{font-size:14px;line-height:1.45;color:var(--label-2)}
+
+/* Avisos */
+.note{display:flex;gap:13px;align-items:flex-start;padding:16px 18px;border-radius:20px;background:rgba(255,159,10,.09);box-shadow:inset 0 0 0 .5px rgba(255,159,10,.32)}
+.note>.i{width:22px;height:22px;margin-top:1px;color:var(--orange)}
+.note.good{background:rgba(48,209,88,.09);box-shadow:inset 0 0 0 .5px rgba(48,209,88,.32)}
+.note.good>.i{color:var(--green)}
+.note-text{display:grid;gap:4px;min-width:0}
+.note strong{font-weight:650}
+.note p{color:var(--label-2)}
+
+/* Valor em destaque */
+.value{position:relative;overflow:hidden;isolation:isolate;display:grid;gap:14px;padding:22px 20px 20px;border-radius:26px;background:linear-gradient(150deg,rgba(221,0,0,.5),rgba(80,4,6,.62) 58%,rgba(20,4,5,.75));box-shadow:inset 0 0 0 .5px rgba(255,255,255,.16),0 24px 50px -26px rgba(0,0,0,.95)}
+.value::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.14) 50%,rgba(255,255,255,0) 62%) 100% 0/250% 100% no-repeat;pointer-events:none}
+.value .kicker{color:rgba(252,241,213,.72)}
+.value-big{font-size:clamp(42px,12vw,60px);line-height:1;font-weight:750;letter-spacing:-.035em;font-variant-numeric:tabular-nums;color:var(--cream)}
+.value-big small{font-size:.42em;font-weight:650;letter-spacing:-.01em;color:rgba(252,241,213,.7)}
+.value-sub{font-size:16px;color:rgba(252,241,213,.82);font-variant-numeric:tabular-nums}
+.value-sub b{color:var(--cream);font-weight:650}
+.value .tag{background:rgba(0,0,0,.24)}
+
+/* O projeto da Vanessa */
+.arch{gap:16px}
+.arch-head{display:flex;align-items:center;gap:16px}
+.arch-mark{flex:none;display:grid;place-items:center;width:76px;height:76px;border-radius:20px;background:#120a0b;box-shadow:inset 0 0 0 .5px rgba(252,241,213,.25)}
+.arch-mark img{display:block;width:58px;height:auto}
+.arch-id{display:grid;gap:2px;min-width:0}
+.arch-name{font-family:var(--serif);font-size:27px!important;line-height:1.1!important;font-weight:600!important;letter-spacing:.005em!important;color:var(--cream)}
+.arch-id p{font-size:14px}
+.plan-photo{display:block;margin:0 -6px;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 18px 40px -22px rgba(0,0,0,.9)}
+.plan-photo img{display:block;width:100%;height:auto;transition:transform .6s var(--ease)}
+.plan-photo:active img{transform:scale(.99)}
+.sheets{display:flex;flex-wrap:wrap;gap:6px}
+.sheets span{padding:5px 10px;border-radius:9px;font-size:13px;color:var(--cream);background:rgba(252,241,213,.08)}
+.rooms{list-style:none;margin:0;padding:0;display:grid;column-gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.rooms li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-top:.5px solid var(--separator);font-size:15px}
+.rooms .val{font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kv{display:grid;margin:0}
+.kv>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0 0;border-top:.5px solid var(--separator)}
+.kv dt{color:var(--label);font-weight:600;font-size:15px}
+.kv dd{margin:0;font-size:19px;font-weight:750;color:var(--cream);font-variant-numeric:tabular-nums;white-space:nowrap}
+.quote{position:relative;padding:22px 20px;border-radius:22px;background:linear-gradient(150deg,rgba(221,0,0,.5),rgba(80,4,6,.6) 60%,rgba(20,4,5,.7));box-shadow:inset 0 0 0 .5px rgba(255,255,255,.14),0 18px 40px -26px rgba(0,0,0,.9)}
+.quote p{font-size:19px;line-height:1.45;font-weight:600;letter-spacing:-.01em;color:var(--cream);text-wrap:pretty}
+.quote .by{margin-top:10px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(252,241,213,.6)}
+
+/* Investimento */
+.calc{display:grid;gap:8px;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
+.calc-cell{display:grid;gap:2px;padding:14px;border-radius:16px;background:var(--fill-2);min-width:0}
+.calc-cell b{font-size:20px;line-height:1.15;font-weight:750;letter-spacing:-.015em;font-variant-numeric:tabular-nums}
+.calc-cell span{font-size:13px;color:var(--label-2)}
+.calc-op{font-size:20px;font-weight:600;color:var(--label-3);text-align:center}
+.calc-total{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 16px;border-radius:16px;background:rgba(221,0,0,.16);box-shadow:inset 0 0 0 1px rgba(255,69,58,.45)}
+.calc-total span{font-size:15px;font-weight:600}
+.calc-total b{font-size:24px;font-weight:750;letter-spacing:-.02em;color:var(--cream);font-variant-numeric:tabular-nums}
+.versus{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.vs{display:grid;gap:10px;align-content:start;padding:14px;border-radius:16px;background:var(--fill-2);min-width:0}
+.vs.pro{background:rgba(255,69,58,.12);box-shadow:inset 0 0 0 1px rgba(255,69,58,.45)}
+.vs-name{font-size:12px;font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--label-3)}
+.vs.pro .vs-name{color:var(--tint)}
+.vs ul{margin:0;padding:0 0 0 17px;display:grid;gap:5px;font-size:14px;line-height:1.4;color:var(--label-2)}
+.vs.pro ul{color:var(--label)}
+.vs li::marker{color:var(--label-3)}
+.vs.pro li::marker{color:var(--tint)}
+.mix{display:flex;gap:2px;height:18px;border-radius:999px;overflow:hidden}
+.mix span{display:block;height:100%;transform-origin:left center}
+.c1{background:var(--concrete)}.c2{background:var(--blue)}.c3{background:var(--orange)}.c4{background:var(--cream)}.c5{background:var(--tint)}.c6{background:var(--stone)}.c7{background:var(--green)}
+.mix-list{list-style:none;margin:0;padding:0;display:grid}
+.mix-list li{display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 0;border-top:.5px solid var(--separator)}
+.mix-list li:first-child{border-top:0;padding-top:2px}
+.mix-n{display:grid;place-items:center;width:26px;height:26px;border-radius:8px;font-size:13px;font-weight:750;color:#1a0d0e;font-variant-numeric:tabular-nums}
+.mix-text{display:grid;gap:2px;min-width:0}
+.mix-text b{font-size:15.5px;font-weight:650;line-height:1.3}
+.mix-text span{font-size:13.5px;line-height:1.45;color:var(--label-2)}
+.mix-val{display:grid;justify-items:end;gap:1px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mix-val b{font-size:15.5px;font-weight:700}
+.mix-val span{font-size:12.5px;color:var(--label-3)}
+.validity{display:flex;align-items:center;gap:14px}
+.validity .tile{width:52px;height:52px;border-radius:14px}
+.validity-text{display:grid;gap:1px}
+.validity-text strong{font-size:22px;font-weight:750;letter-spacing:-.015em;font-variant-numeric:tabular-nums}
+.validity-text span{font-size:14.5px;color:var(--label-2)}
+
+/* Escopo */
+.later{display:grid;gap:10px}
+.later-row{display:flex;align-items:flex-start;gap:11px;font-size:15.5px;line-height:1.4}
+.later-row .i{margin-top:1px}
+.later-row.ok .i{color:var(--green)}
+.later-row.no .i{color:var(--label-3)}
+.later-row span{color:var(--label-2)}
+.later-row b{color:var(--label);font-weight:650}
+.scope-ok{box-shadow:inset 0 0 0 1px rgba(48,209,88,.35),0 18px 40px -26px rgba(0,0,0,.9)}
+
+/* Como funciona */
+.steps{list-style:none;margin:0;padding:0;display:grid}
+.step{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding-bottom:24px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:19px;top:46px;bottom:6px;width:2px;background:linear-gradient(180deg,rgba(255,220,215,0) 42%,rgba(255,220,215,.95) 50%,rgba(255,220,215,0) 58%) 0 100%/100% 300% no-repeat,linear-gradient(rgba(255,69,58,.7),rgba(255,69,58,.12))}
+.step:last-child::before{display:none}
+.step-n{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;font-weight:750;font-variant-numeric:tabular-nums;color:var(--tint);background:rgba(255,69,58,.15);box-shadow:inset 0 0 0 1px rgba(255,69,58,.45)}
+.step-body{display:grid;gap:6px;padding-top:7px;min-width:0}
+.step-body h3{font-size:18px}
+.seq{display:flex;flex-wrap:wrap;gap:6px}
+.seq span{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;font-size:12.5px;font-weight:600;background:var(--fill-2)}
+.seq i{width:8px;height:8px;border-radius:3px}
+
+/* Próximo passo */
+.cta{display:grid;gap:16px;padding:22px 18px 18px;border-radius:28px;background:rgba(34,20,21,.55);-webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);box-shadow:0 30px 80px -24px rgba(0,0,0,.85),inset 0 1px 1px rgba(255,255,255,.2),inset 0 0 0 .5px rgba(255,255,255,.12)}
+.cta h2{font-size:clamp(26px,6.4vw,32px);line-height:1.12;font-weight:750;letter-spacing:-.022em}
+.cta p{color:var(--label-2)}
+.topics{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.topics li{display:flex;align-items:center;gap:10px;font-size:15.5px}
+.topics .i{color:var(--tint)}
+.primary{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font-size:17px;font-weight:600;letter-spacing:-.01em;color:#fff;text-decoration:none;background:var(--brand) linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0) 58%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(0,0,0,.14),0 12px 26px -12px rgba(221,0,0,.9);transition:transform .3s var(--spring),filter .2s}
+.primary::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(100deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.32) 50%,rgba(255,255,255,0) 65%) 100% 0/250% 100% no-repeat;pointer-events:none}
+.primary:active{transform:scale(.97);filter:brightness(.94)}
+.primary .i{width:22px;height:22px}
+.contact{border-radius:20px;background:rgba(0,0,0,.25);box-shadow:none}
+.contact .row{min-height:66px}
+.copy{flex:none;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;color:var(--tint);background:rgba(255,69,58,.14);transition:transform .25s var(--spring)}
+.copy:active{transform:scale(.9)}
+.copy .i{width:18px;height:18px}
+#c-phone,#c-mail{text-decoration:none}
+#c-mail{overflow-wrap:anywhere}
+.sign{display:flex;align-items:center;gap:14px}
+.sign .app-icon{width:52px;height:52px;border-radius:14px}
+.sign-text{display:grid;gap:1px;min-width:0}
+.sign-text strong{font-size:17px;font-weight:650}
+.sign-text span{font-size:14px;color:var(--label-2)}
+.foot{display:grid;justify-items:center;gap:14px;padding:44px 8px 0;text-align:center}
+.foot .partners{justify-content:center}
+.foot .partners .wordmark{width:100px;filter:none;opacity:.85}
+.foot .vz img{height:34px}
+.foot p{max-width:50ch;font-size:12.5px;line-height:1.5;color:var(--label-3)}
+
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:30;padding:11px 18px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--label);background:rgba(40,26,27,.8);-webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%);box-shadow:0 18px 40px -16px rgba(0,0,0,.9),inset 0 0 0 .5px rgba(255,255,255,.16);transform:translate(-50%,160%);transition:transform .45s var(--spring);pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.is-on{transform:translate(-50%,0)}
+
+@media(max-width:420px){
+  .card{padding:16px}
+  .vs{padding:12px}
+  .calc-cell{padding:12px}
+  .calc-cell b{font-size:17px}
+  .arch-mark{width:64px;height:64px;border-radius:17px}
+  .arch-mark img{width:48px}
+  .arch-name{font-size:24px!important}
+  .contact .tile{display:none}
+  .contact .row{gap:12px;padding:10px 14px}
+  .contact .row-title{font-size:15.5px}
+}
+@media(max-width:360px){.versus,.calc{grid-template-columns:minmax(0,1fr)}.calc-op{line-height:1}.partners .x{display:none}}
+@media(prefers-contrast:more){:root{--label-2:rgba(235,235,245,.86);--label-3:rgba(235,235,245,.7);--separator:rgba(255,255,255,.3)}}
+
+@media(prefers-reduced-motion:no-preference){
+  .hero-mark .mark-base path{animation:draw 2.4s cubic-bezier(.65,0,.35,1) .3s both}
+  .hero-mark .mark-base path+path{animation-delay:.55s}
+  .hero-mark .mark-trace{animation:show-in .8s var(--ease) 2.6s both}
+  .hero-mark .mark-trace path{animation:trace 7s linear 2.6s infinite}
+  .hero-mark .mark-trace path+path{animation-delay:1.7s}
+  .value::after{animation:bar-sheen 5s ease-in-out .8s infinite}
+  .mix.is-in span{animation:grow .9s var(--ease) both}
+  .mix.is-in span:nth-child(2){animation-delay:.08s}.mix.is-in span:nth-child(3){animation-delay:.16s}.mix.is-in span:nth-child(4){animation-delay:.24s}
+  .mix.is-in span:nth-child(5){animation-delay:.32s}.mix.is-in span:nth-child(6){animation-delay:.4s}.mix.is-in span:nth-child(7){animation-delay:.48s}
+  .step::before{animation:flow 3.4s linear infinite}
+  .step:nth-child(2)::before{animation-delay:.85s}
+  .step:nth-child(3)::before{animation-delay:1.7s}
+  .primary::after{animation:bar-sheen 5s ease-in-out 1.2s infinite}
+}
+@keyframes trace{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes show-in{from{opacity:0}to{opacity:1}}
+@keyframes bar-sheen{0%{background-position:100% 0}55%,100%{background-position:0 0}}
+@keyframes flow{from{background-position:0 100%,0 0}to{background-position:0 0,0 0}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false"><defs><path id="mg-d" fill-rule="evenodd" d="m1067 124c-9 1-21 5-21 7c0 1 10 10 17 14c4 2 13 8 20 12c17 11 30 20 43 33c50 49 77 122 65 175c-6 26-18 44-39 58c-10 6-19 10-42 16c-31 8-42 13-48 21c-1 2-5 8-8 14l-7 11l-29 1c-85 3-242 4-437 2c-111-1-209-1-236 0l-19 0l0 81l0 81l352 0c336 0 352 0 359 1c13 3 17 8 18 22c2 15 7 21 23 28c17 7 26 12 31 17c7 7 12 18 15 29c3 14 1 63-3 115c-2 21-5 62-5 71l0 7l80 0c44-1 90-1 102-2l23 0l-1-7c0-4 0-28-1-54c-1-26-1-65-2-87c0-22-1-46-1-52l0-11l8-5c22-11 29-18 32-30c2-9 3-13 5-52c7-125 5-194-8-260c-15-70-44-128-87-174c-29-32-47-44-83-59c-45-19-90-28-116-23m-716 979c-1 159 0 290 0 290c0 1 71 1 158 0l157 0l0-81l0-80l-58 0l-58 0l0-208l0-209l-45 0c-25 0-70 0-100-1l-54 0l0 289m762 70l0 62l-129 0c-72 0-130 1-130 1c-1 1-1 23 0 51c1 27 1 62 2 78l0 29l15 1c8 0 60 0 117 0c86 1 106 0 130-1c72-5 100-11 128-30c7-5 21-18 27-26c19-25 29-60 35-112c2-14 3-81 2-99l-1-15l-98 0l-98 0l0 61"/><path id="mg-o" fill-rule="evenodd" d="m1260 939c-33 1-129 1-212 1c-118 0-156 0-166 1c-53 5-87 13-114 27c-46 23-74 60-90 116c-11 39-12 72-12 283c1 133 1 143 3 168c1 14 3 32 4 39c8 51 22 84 47 109c33 34 81 51 163 58c16 1 54 1 262 2c133 1 253 1 266 1c34 0 65-3 91-8c37-6 64-17 90-34c11-7 34-30 41-41c19-29 31-63 35-104c5-45 8-318 4-371c-4-73-14-118-31-152c-10-19-15-26-28-39c-12-12-22-19-37-26c-40-20-94-27-202-29c-16-1-35-1-41-1c-7-1-40 0-73 0m-274 174c-23 1-29 1-67 5c-33 2-39 4-46 9c-9 8-14 28-18 66c-2 25-3 45-1 109c1 25 1 67 1 92c-1 113 0 128 4 142c7 18 17 25 41 28c63 9 372 13 484 6c57-3 82-7 87-14c7-10 12-49 14-123c1-36 1-224-1-251c-1-26-5-38-14-48c-11-11-29-17-62-20c-15-1-385-2-422-1"/></defs><symbol id="wordmark" viewBox="0 0 2000 1073"><path class="wm-dia" fill-rule="evenodd" d="m311 1c-3 0-6 1-7 1c-1 2 2 4 13 10c6 4 14 10 21 16c10 9 10 10 16 21c16 35 17 55 2 71c-8 7-12 9-25 13c-16 4-18 5-22 12c-2 3-4 6-5 7c-3 1-105 2-201 1l-101 0l0 34l0 34l142 0c78 0 146 0 152 0l10 1l1 5c1 3 2 7 2 8c1 3 1 3 17 12c4 2 7 5 9 7c2 4 3 5 2 21c0 14-1 36-3 65l-1 6l44 0c23 0 43 0 43-1c1 0 0-21-1-46c-1-38-1-46 0-46c1-1 4-2 7-4c4-2 6-5 7-7c3-5 5-31 6-59c1-70-13-121-44-152c-20-19-42-29-70-30c-5-1-11 0-14 0m176 209c-5 1-9 4-11 8c-1 3-1 8-2 43c0 22-1 75-1 118c0 97 2 142 5 146c4 4 32 5 55 3c6-1 12-2 12-2c1 0 3-12 4-26c2-20 2-154 1-219c-1-51-1-57-3-62c-1-6-2-6-6-8c-6-1-48-2-54-1m300 0c-14 4-24 15-45 51c-5 7-20 32-35 55c-15 23-40 62-57 87c-16 26-37 57-46 71c-9 13-17 27-18 29c-2 6-3 15-1 20c1 3 1 3 13 4c16 3 32 4 41 2c14-2 24-9 34-24c14-22 32-51 55-87c50-79 73-113 80-119c2-2 2-2 4 1c6 7 15 20 25 35c6 10 32 50 58 91c25 40 49 76 52 81c6 10 11 16 17 19c9 4 23 5 46 3c20-2 20-2 21-6c5-12 3-20-9-38c-19-27-41-60-68-102c-34-53-87-135-97-150c-8-13-13-19-19-21c-4-2-7-2-25-3c-15 0-23 0-26 1m393 0c-6 2-10 5-12 10c-2 3-2 6-3 31l0 28l144 0c139 0 157 0 183 3l6 0l1 10c2 21 3 55 2 101c-1 38-1 47-2 52c-2 6-5 10-10 12l-4 3l-66-1c-123-1-252-1-253 1c-1 1-1 8-1 26c0 28 0 31 5 37c6 6-3 6 167 6c96 0 158 0 164-1c25-3 41-9 53-22c12-12 19-28 21-52c1-14 1-154 0-168c-2-23-9-41-20-52c-11-12-22-18-41-22c-9-2-11-2-169-3c-130 0-161 0-165 1m464 2c-6 2-11 7-12 14c-2 11 0 46 3 50c0 0 4 0 8 1c29 4 91 6 220 4c58 0 109-1 113-2c3 0 10-1 13-2l7-1l2-8c1-6 2-11 1-26c0-17 0-18-2-23c-2-3-4-5-7-7l-4-2l-169 0c-143 0-170 0-173 2m-1632 201l0 121l101 0c55 0 133 0 172-1c68-1 72-1 80-3c19-4 32-14 39-28c7-14 10-29 11-63l0-24l-41 0l-42 0l0 26l0 25l-118 0l-118 0l0-87l0-88l-42 0l-42 0l0 122m1635-80c-8 2-13 6-15 14c-3 12 0 47 3 51c4 3 62 6 141 6c74 0 200-2 208-3c12-2 12-2 14-11c2-8 2-34 1-43c-1-5-5-10-9-13c-3-1-15-1-171-2c-93 0-170 1-172 1m0 127c-6 1-10 4-13 9c-2 4-2 6-3 21c0 15 1 23 3 32l1 4l10 1c28 3 41 4 159 3c130 0 179-1 187-3l5-2l2-7c1-6 2-11 1-25c0-10 0-19-1-22c-1-5-6-9-13-11c-6-1-331-1-338 0"/><path class="wm-obra" fill-rule="evenodd" d="m176 571c-81 1-84 1-102 5c-20 4-37 15-47 28c-10 13-18 36-20 57c-1 6-1 41-1 98c1 95 1 94 6 112c9 30 27 47 56 56c19 6 11 5 158 6c94 0 139 0 146-1c43-4 69-24 80-59c6-18 7-24 8-95c2-94-2-140-14-164c-4-7-11-17-16-22c-11-9-33-16-59-19c-16-2-61-3-91-3c-15 0-62 1-104 1m369 0c-10 0-19 1-21 1c-2 0-3 2-4 22c-1 15 0 39 2 46c1 4 1 4 7 5c3 0 72 0 154 0c148-1 177-1 197 2c8 1 8 1 9 5c3 9 4 27 2 36c0 3-1 4-4 5c-22 6-82 8-240 6c-59-1-111-1-116-1l-9 1l0 29c-1 16-1 33-2 39l0 11l175 0c118 0 178 0 182 1c17 3 24 12 25 36c1 24-5 36-18 40c-2 1-62 1-183 1l-180 0l0 38c-1 21-1 39 0 39c0 0 81 1 180 1c167 0 180-1 191-2c47-7 76-29 87-66c5-14 6-22 6-42c-1-38-6-58-20-74c-7-7-14-16-14-16c0-1 2-4 5-9c14-22 16-32 16-57l0-16l26 0c57-2 232-3 263-3c59 2 92 4 104 7c3 1 4 2 4 4c3 13 4 19 4 44c0 26-1 33-5 49l-1 7l-8 1c-20 3-32 3-78 2c-54-1-117-1-119 0c-2 1-2 1 1 6c6 7 26 27 53 51c13 12 32 30 41 40c45 46 69 68 78 72c5 3 108 1 111-1c0-1 1-2 1-4c1-2 0-4-2-7c-1-2-14-14-29-26c-26-23-55-50-54-51c0-1 20-7 34-11c31-8 49-25 56-51c4-16 5-21 5-66c0-37-1-46-2-56c-9-61-31-80-94-85c-22-2-409-2-437 0c-17 1-24 1-29 0c-3 0-12-1-20-2c-18-1-306-2-330-1m1179 3c-9 1-16 5-21 11c-2 2-9 12-15 22c-10 16-134 207-165 255c-18 28-25 39-26 44c-2 4-2 16 0 19l1 3l29 2c16 1 32 1 35 1c8-1 17-6 22-12c5-5 10-12 21-30c5-7 17-27 28-44c63-98 83-131 90-141c9-15 18-26 23-30c2-2 5-3 5-3c0 0 2 3 3 6c7 14 31 50 101 158c18 27 38 58 44 67c12 19 18 26 25 28c7 2 56 2 64 0c18-6 15-21-8-55c-16-24-22-34-92-142c-86-131-89-136-93-144c-5-8-10-11-16-13c-6-2-46-3-55-2m-1582 76c-21 1-36 2-40 4c-4 1-8 10-10 22c-1 12-2 29-1 106c1 53 1 54 3 59c2 5 7 9 14 11c13 4 204 6 237 2c19-2 24-3 25-5c2-4 3-23 4-53c2-38 1-125-1-130c-2-8-9-13-20-15c-7-1-181-2-211-1"/><path class="wm-tag" fill-rule="evenodd" d="M27 981C17 984 7 993 3 1003C0 1010 0 1022 3 1029C11 1049 36 1058 55 1047L60 1045L60 1039L60 1034L57 1037C51 1042 45 1044 37 1044C31 1044 29 1044 24 1042C15 1037 10 1029 9 1018C9 1011 9 1010 12 1003C17 993 25 988 37 988C44 988 51 990 56 995L60 998L60 993L60 987L53 984C48 981 46 981 39 980C34 980 29 980 27 981ZM225 981C215 985 207 992 202 1002C200 1007 200 1009 200 1016C200 1027 203 1034 210 1042C218 1049 225 1051 237 1052C244 1052 246 1051 251 1049C275 1038 280 1006 261 989C259 988 256 986 252 984C247 981 244 981 238 980C233 980 228 981 225 981ZM227 989C218 993 212 999 209 1007C207 1012 208 1022 210 1027C217 1042 234 1048 249 1041C259 1036 264 1027 264 1016C264 1004 257 993 246 990C241 988 231 988 227 989ZM412.6 1015L412.6 1050L416.6 1050L420.6 1050L420.6 1025L421.6 1000L443.6 1024C456.6 1038 467.6 1049 468.6 1051C470.6 1052 470.6 1051 470.6 1017L470.6 981L466.6 981L462.6 981L462.6 1007L462.6 1034L437.6 1007C424.6 992 413.6 980 412.6 980C412.6 980 412.6 996 412.6 1015ZM622.1 982C615.1 985 611.1 993 613.1 1000C615.1 1008 619.1 1012 630.1 1017C639.1 1020 643.1 1023 644.1 1028C647.1 1037 641.1 1045 632.1 1045C626.1 1045 622.1 1042 619.1 1037L618.1 1032L614.1 1034C610.1 1036 610.1 1036 611.1 1039C612.1 1041 614.1 1044 616.1 1046C626.1 1056 645.1 1053 651.1 1041C654.1 1035 654.1 1027 651.1 1022C649.1 1017 645.1 1014 634.1 1009C624.1 1005 621.1 1002 621.1 996C621.1 991 626.1 987 632.1 987C636.1 987 637.1 988 640.1 991L643.1 994L646.1 992C650.1 990 650.1 989 646.1 986C640.1 980 630.1 978 622.1 982ZM793.4 985L793.4 989L803.4 989L812.4 989L812.4 1020L812.4 1050L817.4 1050L821.4 1050L821.4 1020L821.4 989L831.4 989L840.4 989L840.4 985L840.4 981L817.4 981L793.4 981L793.4 985ZM980.4 1015L980.4 1050L984.4 1050L987.4 1050L987.4 1034C987.4 1024 987.4 1018 988.4 1018C989.4 1018 994.4 1025 1001.4 1034L1013.4 1050L1018.4 1050C1022.4 1050 1023.4 1050 1022.4 1049C1022.4 1048 1017.4 1041 1010.4 1033C999.4 1018 998.4 1017 1004.4 1017C1008.4 1017 1014.4 1013 1016.4 1010C1019.4 1003 1018.4 993 1014.4 988C1010.4 983 1007.4 982 993.4 981L980.4 981L980.4 1015ZM987.4 999L987.4 1011L995.4 1011C1005.4 1011 1009.4 1009 1010.4 1003C1011.4 998 1009.4 993 1006.4 991C1004.4 989 1001.4 989 995.4 988L987.4 988L987.4 999ZM1162.7 1006C1162.7 1033 1163.7 1037 1168.7 1044C1171.7 1048 1177.7 1051 1185.7 1052C1199.7 1053 1208.7 1049 1212.7 1039C1215.7 1034 1215.7 1033 1215.7 1007L1215.7 981L1211.7 981L1207.7 982L1206.7 1008C1206.7 1031 1205.7 1034 1204.7 1037C1200.7 1042 1196.7 1044 1187.7 1044C1179.7 1043 1176.7 1042 1173.7 1035C1171.7 1032 1171.7 1029 1170.7 1006L1170.7 981L1166.7 981L1162.7 981L1162.7 1006ZM1355.7 985L1355.7 989L1365.7 989L1374.7 989L1374.7 1020L1374.7 1050L1379.7 1050L1383.7 1050L1383.7 1020L1383.7 989L1393.7 989L1402.7 989L1402.7 985L1402.7 981L1379.7 981L1355.7 981L1355.7 985ZM1568.1 982C1558.1 985 1548.1 995 1544.1 1005C1542.1 1012 1542.1 1023 1545.1 1030C1549.1 1037 1553.1 1042 1559.1 1046C1574.1 1056 1594.1 1053 1606.1 1040C1614.1 1032 1616.1 1028 1616.1 1016C1616.1 1008 1615.1 1006 1613.1 1001C1610.1 994 1603.1 987 1595.1 983C1588.1 980 1575.1 979 1568.1 982ZM1568.1 990C1550.1 999 1545.1 1021 1559.1 1035C1572.1 1049 1595.1 1046 1605.1 1029C1607.1 1024 1607.1 1022 1607.1 1016C1607.1 1007 1605.1 1000 1599.1 995C1593.1 990 1589.1 989 1581.1 988C1574.1 988 1572.1 988 1568.1 990ZM1756.1 1015L1756.1 1050L1760.1 1050L1763.1 1050L1763.1 1034C1763.1 1024 1763.1 1018 1764.1 1018C1765.1 1018 1770.1 1025 1777.1 1034L1789.1 1050L1794.1 1050C1798.1 1050 1799.1 1050 1798.1 1049C1798.1 1048 1793.1 1041 1786.1 1033C1775.1 1018 1774.1 1017 1780.1 1017C1784.1 1017 1790.1 1013 1792.1 1010C1795.1 1003 1794.1 993 1790.1 988C1786.1 983 1783.1 982 1769.1 981L1756.1 981L1756.1 1015ZM1763.1 999L1763.1 1011L1771.1 1011C1781.1 1011 1785.1 1009 1786.1 1003C1787.1 998 1785.1 993 1782.1 991C1780.1 989 1777.1 989 1771.1 988L1763.1 988L1763.1 999ZM1966 987C1964 990 1959 1003 1953 1016C1947 1030 1941 1042 1941 1043C1940 1044 1939 1047 1939 1048C1938 1050 1938 1050 1942 1050L1946 1050L1951 1040L1955 1030L1968 1029L1982 1029L1986 1040L1990 1050L1995 1050C1998 1050 1999 1050 1999 1049C1998 1048 1992 1035 1985 1019C1978 1003 1971 989 1970 986L1968 982L1966 987ZM1964 1008C1957 1023 1956 1022 1968 1022L1979 1022L1977 1018C1976 1015 1974 1010 1972 1006L1968 999L1964 1008Z"/></symbol><symbol id="monogram" viewBox="326 122 1348 1623"><use class="mg-d" href="#mg-d"/><use class="mg-o" href="#mg-o"/></symbol></svg>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3.5 16.5 16.5 3.5l4 4-13 13z"/><path d="m7.5 12.5 2 2m1-5 1.5 1.5m1-4.5 2 2"/></symbol>
+  <symbol id="i-plan" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="1.5"/><path d="M3.5 12h8v7M11.5 5v4M15 12h5.5"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="12" cy="6.5" rx="7" ry="3"/><path d="M5 6.5v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5M5 11.5v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+  <symbol id="i-found" viewBox="0 0 24 24"><path d="M3 8h18M6 8v12M12 8v12M18 8v12M4.5 20h3M10.5 20h3M16.5 20h3M8 4h8l2 4H6z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9.5 13h6M9.5 17h6"/></symbol>
+  <symbol id="i-stamp" viewBox="0 0 24 24"><path d="M9 13V9.5a3 3 0 1 1 6 0V13"/><path d="M4.5 13h15v4h-15zM6 20.5h12"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/></symbol>
+  <symbol id="i-fence" viewBox="0 0 24 24"><path d="M5 21V7l2-3 2 3v14M15 21V7l2-3 2 3v14M3 10.5h18M3 16.5h18"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M11 7 6 21M13 7l5 14M8.3 15h7.4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12.5 9 5 9-5M3 16.5l9 5 9-5"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.5 7h7M8.5 11h1M14.5 11h1M8.5 14.5h1M14.5 14.5h1M8.5 18h1M14.5 18h1"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2.5 12h2M19.5 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 12h16M12 4v8"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 19.5V5a2 2 0 0 1 2-2h12v15H7a2 2 0 0 0-2 2 2 2 0 0 0 2 2h12"/><path d="M9 7h6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></symbol>
+  <symbol id="i-steps" viewBox="0 0 24 24"><path d="M3 20h5v-5h5v-5h5V5h3"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h10.5l2-8H6.2"/><circle cx="9" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-2.5 6a2.5 2.5 0 0 0 5 0zM19 7l-2.5 6a2.5 2.5 0 0 0 5 0z"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="m3 9 9-5 9 5M5.5 10.5v7M10 10.5v7M14 10.5v7M18.5 10.5v7M3 20.5h18"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.4a8.5 8.5 0 1 1 15.5-4.6z"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-helmet" viewBox="0 0 24 24"><path d="M3.5 17.5h17M5 17.5V15a7 7 0 0 1 14 0v2.5M10 8.3V5.5h4v2.8M12 5.5V11"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5M10 20v-5h4v5"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.5 10h4M14.5 13.5h3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.2v.3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3"/><rect x="4" y="8" width="16.5" height="11.5" rx="2.5"/><path d="M16 13.8h1"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7 20 3M16.5 6.5l2.5 2.5M14.3 8.7l2 2"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 20c0-9 5.5-14.5 15-15.5C19 14 13.5 19.5 5 20z"/><path d="M5 20l8-8"/></symbol>
+  <symbol id="i-stone" viewBox="0 0 24 24"><path d="M3.5 16 6 8.5l6-3 6.5 3.5 2 7-5 4h-8z"/><path d="M6 8.5 10 13l2-7.5M10 13l5.5 7M10 13l-6.5 3M10 13l10.5 2"/></symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="14" height="5" rx="1.5"/><path d="M17.5 6h2.5v5h-8.5v3"/><rect x="10" y="14" width="3" height="7" rx="1"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3.5 20.5h17M6 20.5V4h8v16.5M14 9h4v11.5"/><path d="M9 7.5h2M9 11h2M9 14.5h2"/></symbol>
+</svg>
+
+<div class="wallpaper" aria-hidden="true"><span class="glow glow-a"></span><span class="glow glow-c"></span></div>
+
+<div class="page">
+  <nav class="topbar" aria-label="Seções">
+    <span class="app-icon" aria-hidden="true"><svg viewBox="326 122 1348 1623"><use href="#monogram"/></svg></span>
+    <div class="chips" id="chips">
+      <a href="#resumo">Resumo</a>
+      <a href="#projeto">Projeto</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#escopo">Escopo</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <!-- RESUMO -->
+  <header class="hero sec" id="resumo">
+    <svg class="hero-mark" viewBox="0 0 454 550" aria-hidden="true"><g class="mark-base"><path pathLength="1" d="M317 9C314 9 311 10 310 10C309 11 312 14 323 20C329 24 337 30 344 36C354 45 354 45 360 57C376 91 377 112 362 127C354 134 350 137 337 140C321 144 319 145 315 152C313 156 311 159 310 159C307 161 205 161 109 161L8 160 8 194L8 228 150 228C228 228 296 229 302 229L312 230 313 235C314 238 315 241 315 243C316 245 316 246 332 255C336 257 339 260 341 262C343 266 344 266 343 283C343 296 342 318 340 348L339 354 383 354C406 354 426 353 426 353C427 352 426 332 425 307C424 269 424 261 425 260C426 260 429 258 432 256C436 254 438 252 439 250C442 245 444 218 445 191C446 120 432 70 401 39C381 19 359 10 331 8C326 8 320 8 317 9"/><path pathLength="1" d="M18 420L18 542 119 542C174 541 252 541 291 541C359 540 363 540 371 538C390 533 403 524 410 510C417 495 420 480 421 446L421 423 380 423L338 423 338 448L338 474 220 474L102 474 102 386L102 299 60 299L18 299 18 420"/></g><g class="mark-trace"><path pathLength="1" d="M317 9C314 9 311 10 310 10C309 11 312 14 323 20C329 24 337 30 344 36C354 45 354 45 360 57C376 91 377 112 362 127C354 134 350 137 337 140C321 144 319 145 315 152C313 156 311 159 310 159C307 161 205 161 109 161L8 160 8 194L8 228 150 228C228 228 296 229 302 229L312 230 313 235C314 238 315 241 315 243C316 245 316 246 332 255C336 257 339 260 341 262C343 266 344 266 343 283C343 296 342 318 340 348L339 354 383 354C406 354 426 353 426 353C427 352 426 332 425 307C424 269 424 261 425 260C426 260 429 258 432 256C436 254 438 252 439 250C442 245 444 218 445 191C446 120 432 70 401 39C381 19 359 10 331 8C326 8 320 8 317 9"/><path pathLength="1" d="M18 420L18 542 119 542C174 541 252 541 291 541C359 540 363 540 371 538C390 533 403 524 410 510C417 495 420 480 421 446L421 423 380 423L338 423 338 448L338 474 220 474L102 474 102 386L102 299 60 299L18 299 18 420"/></g></svg>
+    <div class="partners">
+      <svg class="wordmark" viewBox="0 0 2000 1073" role="img" aria-label="Dia de Obra Construtora"><use href="#wordmark"/></svg>
+      <span class="divider" aria-hidden="true"></span>
+      <div class="vz">
+        <img src="vanessa-logo.png" alt="" width="54" height="36">
+        <div class="vz-name"><strong>Vanessa Santos Azevedo</strong><span>Arquitetura</span></div>
+      </div>
+    </div>
+    <p class="eyebrow">Proposta de reforma · Outubro de 2026</p>
+    <h1>Do projeto da <em>Vanessa</em> ao apartamento pronto</h1>
+    <div class="tags">
+      <span class="tag"><svg class="i"><use href="#i-building"/></svg>Cond. Maralto · Coroa do Meio</span>
+      <span class="tag"><svg class="i"><use href="#i-home"/></svg>Para Karye e Diego</span>
+    </div>
+    <p class="lead">Olá, Karye e Diego! A Vanessa desenhou cada detalhe do novo apartamento de vocês. Agora é a nossa parte: <strong>executar a reforma</strong> com organização, prazo e cuidado com o condomínio, do primeiro dia à entrega.</p>
+  </header>
+
+  <div class="sec tight">
+    <div class="value">
+      <p class="kicker">Investimento estimado da reforma</p>
+      <p class="value-big">R$ 121.883<small>,50</small></p>
+      <p class="value-sub"><b>56,69&nbsp;m²</b> × <b>R$&nbsp;2.150,00</b> por&nbsp;m² de reforma completa</p>
+      <div class="tags">
+        <span class="tag"><svg class="i"><use href="#i-box"/></svg>Materiais e mão de obra</span>
+        <span class="tag"><svg class="i"><use href="#i-calendar"/></svg>Válido até 14/11/2026</span>
+      </div>
+    </div>
+    <div class="note">
+      <svg class="i"><use href="#i-alert"/></svg>
+      <div class="note-text">
+        <strong>Estimativa, não orçamento definitivo</strong>
+        <p>Calculamos a partir das áreas e das quantidades do projeto executivo. Os valores exatos de cada etapa saem da planilha orçamentária detalhada, que fechamos antes de a obra começar.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJETO -->
+  <section class="sec" id="projeto" aria-labelledby="h-proj">
+    <div class="sec-head">
+      <p class="eyebrow">O projeto</p>
+      <h2 id="h-proj">Um apartamento pensado em cada detalhe</h2>
+      <p>A reforma segue o projeto executivo de interiores da arquiteta Vanessa Santos Azevedo.</p>
+    </div>
+
+    <div class="card arch">
+      <div class="arch-head">
+        <span class="arch-mark"><img src="vanessa-logo.png" alt="Marca de Vanessa Santos Azevedo" width="58" height="39"></span>
+        <div class="arch-id">
+          <p class="kicker">Projeto de interiores</p>
+          <h3 class="arch-name">Vanessa Santos Azevedo</h3>
+          <p>Arquiteta · Projeto executivo · Setembro de 2026</p>
+        </div>
+      </div>
+      <a class="plan-photo" href="planta-layout.jpg" target="_blank" rel="noopener" aria-label="Abrir a planta layout em tamanho maior">
+        <img src="planta-layout.jpg" alt="Planta layout do apartamento: estar e jantar integrados à cozinha e à varanda, suíte, quarto, closet, dois banheiros e área de serviço." width="1600" height="1061" loading="lazy">
+      </a>
+      <p class="caption flush">Planta layout do projeto da Vanessa. Toque na imagem para ampliar.</p>
+      <div>
+        <p class="kicker" style="margin-bottom:8px">13 pranchas, todas detalhadas</p>
+        <div class="sheets"><span>Layout</span><span>Reforma</span><span>Closet</span><span>Paginação de piso</span><span>Banheiros</span><span>Acabamentos</span><span>Pontos elétricos</span><span>Forro</span><span>Luminotécnico</span><span>Marmoraria</span></div>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>Um projeto executivo completo é o melhor ponto de partida para uma reforma: cada medida, cada ponto e cada acabamento já está definido antes da primeira marreta.</p>
+    </div>
+
+    <ul class="list" aria-label="O que muda no apartamento">
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-layers"/></svg></span><span class="row-text"><span class="row-title">Ambientes integrados</span><span class="row-sub">Retirada de portas e varanda nivelada com a sala, que passam a formar um espaço só.</span></span></li>
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-grid"/></svg></span><span class="row-text"><span class="row-title">Porcelanato 90×90 no apartamento todo</span><span class="row-sub">Em todo o piso e nas paredes dos dois banheiros, do piso ao teto.</span></span></li>
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-bulb"/></svg></span><span class="row-text"><span class="row-title">Forro de gesso com luz embutida</span><span class="row-sub">Rebaixo de 15 cm, tabica e cortineiro iluminados, espaço para o split, spots, perfis de LED e pendentes.</span></span></li>
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-box"/></svg></span><span class="row-text"><span class="row-title">Closet estruturado em gesso</span><span class="row-sub">Nichos e prateleiras em gesso, mais uma parede nova de gesso.</span></span></li>
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-stone"/></svg></span><span class="row-text"><span class="row-title">Mármore e pedra</span><span class="row-sub">Bancada da cozinha com ilha, bancadas com cuba de apoio, nichos e prateleiras nos banheiros e uma parede em pedra moledo.</span></span></li>
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-plug"/></svg></span><span class="row-text"><span class="row-title">Elétrica atualizada</span><span class="row-sub">Pontos novos e tomadas de 20 A na cozinha, nos banheiros, no serviço e na varanda.</span></span></li>
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-brush"/></svg></span><span class="row-text"><span class="row-title">Pintura, textura e papel de parede</span><span class="row-sub">Cores e acabamentos definidos parede a parede.</span></span></li>
+    </ul>
+
+    <div class="card">
+      <p class="kicker">Áreas do projeto</p>
+      <ul class="rooms" aria-label="Ambientes e áreas">
+        <li><span>Estar e jantar</span><span class="val">13,66 m²</span></li>
+        <li><span>Suíte</span><span class="val">9,05 m²</span></li>
+        <li><span>Closet</span><span class="val">8,05 m²</span></li>
+        <li><span>Quarto</span><span class="val">7,01 m²</span></li>
+        <li><span>Cozinha</span><span class="val">5,04 m²</span></li>
+        <li><span>Varanda</span><span class="val">4,11 m²</span></li>
+        <li><span>Circulação</span><span class="val">3,24 m²</span></li>
+        <li><span>WC suíte</span><span class="val">2,23 m²</span></li>
+        <li><span>WC social</span><span class="val">2,23 m²</span></li>
+        <li><span>Serviço</span><span class="val">2,07 m²</span></li>
+      </ul>
+      <dl class="kv"><div><dt>Área reformada</dt><dd>56,69 m²</dd></div></dl>
+    </div>
+  </section>
+
+  <!-- INVESTIMENTO -->
+  <section class="sec" id="investimento" aria-labelledby="h-inv">
+    <div class="sec-head">
+      <p class="eyebrow">Investimento</p>
+      <h2 id="h-inv">O m² de uma reforma completa</h2>
+      <p>Aplicamos o valor por m² de reforma completa sobre a área de todos os ambientes do projeto.</p>
+    </div>
+
+    <div class="card">
+      <div class="calc" role="img" aria-label="56,69 metros quadrados vezes R$ 2.150,00 por metro quadrado é igual a R$ 121.883,50">
+        <div class="calc-cell"><b>56,69 m²</b><span>Área reformada</span></div>
+        <span class="calc-op" aria-hidden="true">×</span>
+        <div class="calc-cell"><b>R$ 2.150,00</b><span>Por m² de reforma</span></div>
+        <div class="calc-total"><span>Investimento estimado</span><b>R$ 121.883,50</b></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Por que o m² de reforma é diferente</h3>
+      <p>Numa reforma não há fundação nem estrutura, mas há trabalho que uma obra nova não tem. E os acabamentos ficam concentrados em pouca área.</p>
+      <div class="versus">
+        <div class="vs">
+          <span class="vs-name">Construção nova</span>
+          <ul><li>Fundação e estrutura</li><li>Alvenaria e laje</li><li>Instalações do zero</li><li>Acabamentos espalhados pela área</li></ul>
+        </div>
+        <div class="vs pro">
+          <span class="vs-name">Reforma</span>
+          <ul><li>Demolição e retirada de entulho</li><li>Adaptação das instalações existentes</li><li>Acabamentos concentrados</li><li>Logística de condomínio</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Para onde vai o investimento</h3>
+      <p>Distribuição estimada por serviço, na ordem em que a obra acontece.</p>
+      <div class="mix" id="mix" role="img" aria-label="Distribuição: pisos e revestimentos 32%, marmoraria e pedra 17%, gesso 15%, elétrica e iluminação 12%, hidráulica 9%, pintura 8%, preparação 7%">
+        <span class="c1" style="width:7.42%"></span><span class="c2" style="width:8.55%"></span><span class="c3" style="width:12.31%"></span><span class="c4" style="width:14.49%"></span><span class="c5" style="width:32.16%"></span><span class="c6" style="width:17.28%"></span><span class="c7" style="width:7.8%"></span>
+      </div>
+      <ol class="mix-list">
+        <li><span class="mix-n c1">1</span><span class="mix-text"><b>Preparação e demolição</b><span>Proteção das áreas comuns, retirada de pisos, revestimentos e portas, entulho e limpeza final</span></span><span class="mix-val"><b>7%</b><span>≈ R$ 9.000</span></span></li>
+        <li><span class="mix-n c2">2</span><span class="mix-text"><b>Hidráulica e impermeabilização</b><span>Ajustes nos dois banheiros, na cozinha e no serviço, com impermeabilização dos boxes</span></span><span class="mix-val"><b>9%</b><span>≈ R$ 10.400</span></span></li>
+        <li><span class="mix-n c3">3</span><span class="mix-text"><b>Elétrica e iluminação</b><span>Pontos novos, circuitos de 20 A e instalação das luminárias e dos perfis de LED</span></span><span class="mix-val"><b>12%</b><span>≈ R$ 15.000</span></span></li>
+        <li><span class="mix-n c4">4</span><span class="mix-text"><b>Gesso</b><span>67 m² de forro rebaixado com tabica e cortineiro iluminados, parede nova e estrutura do closet</span></span><span class="mix-val"><b>15%</b><span>≈ R$ 17.700</span></span></li>
+        <li><span class="mix-n c5">5</span><span class="mix-text"><b>Pisos e revestimentos</b><span>Porcelanato 90×90 em 57 m² de piso e 31 m² de parede dos banheiros, com nivelamento da varanda</span></span><span class="mix-val"><b>32%</b><span>≈ R$ 39.200</span></span></li>
+        <li><span class="mix-n c6">6</span><span class="mix-text"><b>Marmoraria e pedra</b><span>Bancadas da cozinha e da ilha, bancadas, nichos e prateleiras dos banheiros, parede em pedra moledo</span></span><span class="mix-val"><b>17%</b><span>≈ R$ 21.100</span></span></li>
+        <li><span class="mix-n c7">7</span><span class="mix-text"><b>Pintura e acabamentos</b><span>151 m² de pintura, 10 m² de textura e aplicação de 7 m² de papel de parede</span></span><span class="mix-val"><b>8%</b><span>≈ R$ 9.500</span></span></li>
+      </ol>
+      <p class="caption flush">Porcelanato e mármore considerados em padrão médio-alto. O valor final acompanha as peças escolhidas com a Vanessa.</p>
+    </div>
+
+    <div class="card">
+      <div class="validity">
+        <span class="tile soft" aria-hidden="true"><svg class="i"><use href="#i-calendar"/></svg></span>
+        <div class="validity-text"><p class="kicker">Validade da proposta</p><strong>30 dias</strong><span>De 15/10/2026 até 14/11/2026</span></div>
+      </div>
+      <p>Os valores podem ser ajustados em caso de alteração de escopo, revisão do projeto ou variação de mercado nos preços de materiais e serviços.</p>
+    </div>
+  </section>
+
+  <!-- ESCOPO -->
+  <section class="sec" id="escopo" aria-labelledby="h-esc">
+    <div class="sec-head">
+      <p class="eyebrow">Escopo</p>
+      <h2 id="h-esc">O que o valor inclui</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card scope-ok">
+        <p class="kicker">Por nossa conta</p>
+        <div class="later">
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Demolição</b>, retirada de entulho e limpeza final</span></div>
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Proteção das áreas comuns</b> do condomínio</span></div>
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Compra dos materiais</b> de obra, do porcelanato e do mármore</span></div>
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Mão de obra completa</b> e gestão das equipes</span></div>
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Plano de reforma e ART</b>, com acompanhamento da engenheira responsável</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <p class="kicker">Fora deste valor</p>
+        <div class="later">
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Marcenaria</b> e móveis planejados</span></div>
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Luminárias e lâmpadas</b> (as peças; a instalação está incluída)</span></div>
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Louças, metais e cubas</b></span></div>
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Papel de parede</b> (o material; a aplicação está incluída)</span></div>
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Eletrodomésticos</b> e ar-condicionado</span></div>
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Taxa da ART</b> e taxas do condomínio</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="sec" id="como-funciona" aria-labelledby="h-como">
+    <div class="sec-head">
+      <p class="eyebrow">Como funciona</p>
+      <h2 id="h-como">Reforma em apartamento, sem dor de cabeça</h2>
+      <p>Uma reforma acontece com vizinhos ao lado e regras do condomínio. Por isso, o planejamento vem antes da obra.</p>
+    </div>
+
+    <div class="card">
+      <ol class="steps">
+        <li class="step">
+          <span class="step-n">1</span>
+          <div class="step-body">
+            <h3>Planilha detalhada e cronograma</h3>
+            <p>Com o projeto executivo da Vanessa, levantamos os quantitativos reais e fechamos valores e prazos de cada etapa.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n">2</span>
+          <div class="step-body">
+            <h3>Liberação no condomínio</h3>
+            <p>Preparamos o plano de reforma exigido pela norma NBR 16280, com a ART da engenheira, para aprovação do síndico.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n">3</span>
+          <div class="step-body">
+            <h3>Obra na sequência certa</h3>
+            <p>Cada serviço entra na hora certa, para que nada precise ser desfeito.</p>
+            <div class="seq" aria-label="Sequência da obra"><span><i class="c1"></i>Demolição</span><span><i class="c2"></i>Hidráulica</span><span><i class="c3"></i>Elétrica</span><span><i class="c4"></i>Gesso</span><span><i class="c5"></i>Revestimentos</span><span><i class="c6"></i>Marmoraria</span><span><i class="c7"></i>Pintura</span></div>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n">4</span>
+          <div class="step-body">
+            <h3>Entrega com vistoria</h3>
+            <p>Conferimos a obra com vocês, item por item, contra o projeto.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <ul class="list" aria-label="Cuidados com o condomínio">
+      <li class="row top"><span class="tile cream"><svg class="i"><use href="#i-shield"/></svg></span><span class="row-text"><span class="row-title">Áreas comuns protegidas</span><span class="row-sub">Elevador, hall e corredores protegidos durante toda a obra.</span></span></li>
+      <li class="row top"><span class="tile cream"><svg class="i"><use href="#i-clock"/></svg></span><span class="row-text"><span class="row-title">Horários do regulamento</span><span class="row-sub">Serviços com barulho só nos horários permitidos pelo condomínio.</span></span></li>
+      <li class="row top"><span class="tile cream"><svg class="i"><use href="#i-box"/></svg></span><span class="row-text"><span class="row-title">Entulho sob controle</span><span class="row-sub">Ensacado e retirado com frequência, sem acumular no prédio.</span></span></li>
+      <li class="row top"><span class="tile cream"><svg class="i"><use href="#i-chat"/></svg></span><span class="row-text"><span class="row-title">Um ponto de contato</span><span class="row-sub">Vocês, a Vanessa e o síndico falam com um responsável pela obra.</span></span></li>
+    </ul>
+
+    <div class="quote">
+      <p>Arquiteta e construtora alinhadas desde o início: o que foi desenhado é o que vai ser executado.</p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="sec" id="contato" aria-labelledby="h-cta">
+    <div class="cta">
+      <p class="eyebrow">Próximo passo</p>
+      <h2 id="h-cta">Vamos tirar o projeto do papel?</h2>
+      <p>Uma conversa rápida para:</p>
+      <ul class="topics">
+        <li><svg class="i"><use href="#i-chat"/></svg>Tirar suas dúvidas sobre a proposta</li>
+        <li><svg class="i"><use href="#i-grid"/></svg>Alinhar o padrão do porcelanato e do mármore</li>
+        <li><svg class="i"><use href="#i-calendar"/></svg>Combinar a data de início da obra</li>
+      </ul>
+      <a class="primary" href="https://wa.me/5579999526699?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vi%20a%20proposta%20de%20reforma%20do%20apartamento%20no%20Maralto%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg>Conversar no WhatsApp</a>
+      <ul class="list contact">
+        <li class="row">
+          <span class="tile soft"><svg class="i"><use href="#i-chat"/></svg></span>
+          <span class="row-text"><a class="row-title num" id="c-phone" href="tel:+5579999526699">(79) 99952-6699</a><span class="row-sub">WhatsApp · Fábio Vinícius, comercial</span></span>
+          <button class="copy" type="button" data-copy="(79) 99952-6699" data-target="c-phone" aria-label="Copiar telefone"><svg class="i"><use href="#i-copy"/></svg></button>
+        </li>
+        <li class="row">
+          <span class="tile soft"><svg class="i"><use href="#i-mail"/></svg></span>
+          <span class="row-text"><a class="row-title" id="c-mail" href="mailto:diadeobra.adm@gmail.com">diadeobra.adm@gmail.com</a><span class="row-sub">E-mail</span></span>
+          <button class="copy" type="button" data-copy="diadeobra.adm@gmail.com" data-target="c-mail" aria-label="Copiar e-mail"><svg class="i"><use href="#i-copy"/></svg></button>
+        </li>
+      </ul>
+      <div class="sign">
+        <span class="app-icon" aria-hidden="true"><svg viewBox="326 122 1348 1623"><use href="#monogram"/></svg></span>
+        <div class="sign-text">
+          <strong>Eng.ª Elaine Alfano</strong>
+          <span>Responsável Técnica · CREA-SE nº 13846SE</span>
+          <span>Dia de Obra Construtora</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="partners" aria-hidden="true">
+      <svg class="wordmark" viewBox="0 0 2000 1073"><use href="#wordmark"/></svg>
+      <span class="divider"></span>
+      <div class="vz"><img src="vanessa-logo.png" alt="" width="52" height="34"></div>
+    </div>
+    <p>Estimativa com base no projeto executivo de Vanessa Santos Azevedo (13 pranchas, setembro/2026) e no valor de R$ 2.150,00 por m² de reforma completa. Válida até 14/11/2026. Os valores definitivos dependem da planilha orçamentária detalhada.</p>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var toast=document.getElementById('toast'),timer;
+  function show(msg){toast.textContent=msg;toast.classList.add('is-on');clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove('is-on')},1900)}
+  function selectText(id){var el=document.getElementById(id);if(!el)return;var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var text=btn.getAttribute('data-copy'),target=btn.getAttribute('data-target');
+      function fallback(){selectText(target);show('Selecionado. Toque e segure para copiar.')}
+      try{
+        if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){show('Copiado')},fallback)}
+        else fallback();
+      }catch(e){fallback()}
+    });
+  });
+
+  var chips=document.getElementById('chips');
+  var links=[].slice.call(chips.querySelectorAll('a'));
+  function setActive(id){
+    links.forEach(function(a){
+      var on=a.getAttribute('href')==='#'+id;
+      if(on){a.setAttribute('aria-current','true');var left=a.offsetLeft-chips.offsetLeft-(chips.clientWidth-a.offsetWidth)/2;chips.scrollTo({left:Math.max(0,left),behavior:'smooth'})}
+      else a.removeAttribute('aria-current');
+    });
+  }
+  setActive('resumo');
+  var mix=document.getElementById('mix');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting)setActive(e.target.id)});
+    },{rootMargin:'-35% 0px -60% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1));if(s)io.observe(s)});
+    var mo=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){mix.classList.add('is-in');mo.disconnect()}});
+    },{threshold:.6});
+    mo.observe(mix);
+  }
+})();
+</script>
+</body>
+</html>
