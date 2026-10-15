@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2a0506">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Estimativa de investimento da Dia de Obra Construtora para a sua casa no Sunset Residence.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Dia de Obra Construtora">
+<meta property="og:title" content="Sua casa no Sunset · Dia de Obra">
+<meta property="og:description" content="Estimativa de investimento da obra do Lote 160, Quadra F, com base no seu projeto.">
+<meta property="og:url" content="https://ribaznn.github.io/propostas/emanuel-sunset-barra/">
+<meta property="og:image" content="https://ribaznn.github.io/propostas/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<link rel="icon" type="image/svg+xml" href="../assets/icon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<title>Sua casa no Sunset · Dia de Obra</title>
+<style>
+/* Layout: coluna única no estilo iOS do app Dia de Obra (até 760px), barra de seções em vidro fixa no topo,
+   cartões sólidos sobre o papel de parede vermelho-escuro. Tema escuro único, como o app. */
+:root{
+  color-scheme:dark;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI Variable Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --brand:#dd0000;
+  --cream:#fcf1d5;
+  --tint:#ff453a;
+  --bg:#2a0506;
+  --label:#f5f5f7;
+  --label-2:rgba(235,235,245,.68);
+  --label-3:rgba(235,235,245,.44);
+  --separator:rgba(255,255,255,.1);
+  --card:rgba(30,20,21,.88);
+  --card-edge:inset 0 0 0 .5px rgba(255,255,255,.09),0 18px 40px -26px rgba(0,0,0,.9);
+  --fill:rgba(118,118,128,.26);
+  --fill-2:rgba(118,118,128,.16);
+  --green:#30d158;
+  --orange:#ff9f0a;
+  --blue:#64d2ff;
+  --concrete:#a39d96;
+  --z-social:#33291f;
+  --z-private:#4a1a1b;
+  --z-wet:#123643;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --spring:cubic-bezier(.2,.9,.25,1.06);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;min-height:100dvh;background:var(--bg);color:var(--label);font-family:var(--font);font-size:16px;line-height:1.55;font-synthesis:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2,h3,h4,p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid #0a84ff;outline-offset:3px}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.wm-dia,.wm-tag{fill:var(--wm-dia,currentColor)}.wm-obra{fill:var(--wm-obra,currentColor)}
+.mg-d{fill:var(--mg-d,currentColor)}.mg-o{fill:var(--mg-o,currentColor)}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.num{font-variant-numeric:tabular-nums}
+
+/* Papel de parede do app */
+.wallpaper{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(85% 55% at 10% 10%,rgba(186,0,0,.85) 0%,rgba(186,0,0,0) 70%),radial-gradient(90% 70% at 100% 100%,#000 0%,rgba(0,0,0,0) 70%),linear-gradient(176deg,#2a0506 0%,#3b0405 26%,#1c0304 60%,#0a0203 100%)}
+.wallpaper::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,4,5,.25),rgba(8,3,4,.7) 45%)}
+.glow{position:absolute;border-radius:50%}
+.glow-a{width:80vmax;height:80vmax;left:-32vmax;top:-34vmax;background:radial-gradient(closest-side,rgba(252,241,213,.12),rgba(252,241,213,0))}
+.glow-c{width:50vmax;height:50vmax;right:-8vmax;top:-16vmax;background:radial-gradient(closest-side,rgba(255,59,48,.26),rgba(255,59,48,0))}
+@media(prefers-reduced-motion:no-preference){.glow-a{animation:drift-a 26s ease-in-out infinite alternate}.glow-c{animation:drift-c 38s ease-in-out infinite alternate}}
+@keyframes drift-a{to{transform:translate(12vmax,8vmax) scale(1.1)}}
+@keyframes drift-c{to{transform:translate(-14vmax,10vmax) scale(.9)}}
+
+.page{position:relative;z-index:1;max-width:760px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:0 56px;overflow-x:clip}
+
+/* Barra de seções em vidro */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;gap:6px;margin:10px -6px 0;padding:6px;border-radius:22px;background:rgba(34,20,21,.58);-webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);box-shadow:0 20px 50px -20px rgba(0,0,0,.85),inset 0 1px 1px rgba(255,255,255,.18),inset 0 0 0 .5px rgba(255,255,255,.12)}
+.app-icon{--mg-d:#000;--mg-o:var(--cream);flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0) 55%),var(--brand);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 6px 14px -6px rgba(221,0,0,.8)}
+.app-icon svg{width:auto;height:62%}
+.chips{flex:1;min-width:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent)}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;display:grid;place-items:center;min-height:40px;padding:0 13px;border-radius:13px;font-size:14px;font-weight:500;color:var(--label-2);text-decoration:none;white-space:nowrap;transition:background-color .25s,color .2s}
+.chips a:last-child{margin-right:18px}
+.chips a[aria-current=true]{color:var(--label);font-weight:600;background:rgba(255,255,255,.15);box-shadow:inset 0 .5px 0 rgba(255,255,255,.2)}
+
+/* Abertura */
+.hero{position:relative;isolation:isolate;display:grid;gap:16px;padding:36px 4px 4px}
+.hero .wordmark{--wm-dia:var(--cream);--wm-obra:var(--cream);display:block;width:148px;height:auto;aspect-ratio:2000/1073;filter:drop-shadow(0 10px 24px rgba(0,0,0,.4))}
+.eyebrow{font-size:12.5px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--tint)}
+.hero h1{font-size:clamp(34px,9vw,50px);line-height:1.04;font-weight:750;letter-spacing:-.028em;text-wrap:balance}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;color:var(--cream);background:rgba(252,241,213,.1)}
+.tag .i{width:15px;height:15px}
+.lead{max-width:60ch;font-size:17px;line-height:1.55;color:var(--label-2)}
+.lead strong{color:var(--label);font-weight:600}
+.hero-mark{position:absolute;z-index:-1;top:18px;right:-6px;width:min(54vw,240px);height:auto;overflow:visible;fill:none;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.hero-mark .mark-base path{stroke:rgba(252,241,213,.2);stroke-width:2.2;stroke-dasharray:1 1;stroke-dashoffset:0}
+.hero-mark .mark-trace{opacity:0}
+.hero-mark .mark-trace path{stroke:#ffe7d6;stroke-width:3.2;stroke-dasharray:.09 .91;stroke-dashoffset:1}
+
+/* Seções */
+.sec{display:grid;gap:14px;padding-top:44px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 70px)}
+.sec.tight{padding-top:22px}
+.sec-head{display:grid;gap:6px;padding:0 4px 2px}
+.sec-head h2{font-size:clamp(26px,6.4vw,32px);line-height:1.12;font-weight:750;letter-spacing:-.022em;text-wrap:balance}
+.sec-head p{max-width:62ch;color:var(--label-2)}
+.caption{padding:0 6px;font-size:13px;line-height:1.45;color:var(--label-3)}
+.caption.flush{padding:0}
+
+.card{display:grid;gap:14px;padding:18px;border-radius:22px;background:var(--card);box-shadow:var(--card-edge);min-width:0}
+.card h3{font-size:19px;line-height:1.25;font-weight:680;letter-spacing:-.012em;text-wrap:balance}
+.card p{color:var(--label-2)}
+.kicker{font-size:12px;font-weight:650;letter-spacing:.07em;text-transform:uppercase;color:var(--label-3)}
+.grid-2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.big{font-size:34px;line-height:1.05;font-weight:750;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+.big small{font-size:16px;font-weight:600;letter-spacing:0;color:var(--label-2)}
+
+/* Lista no estilo iOS */
+.list{list-style:none;margin:0;padding:0;border-radius:22px;background:var(--card);box-shadow:var(--card-edge);overflow:hidden}
+.list>li{position:relative}
+.list>li+li::before{content:"";position:absolute;top:0;left:74px;right:0;height:1px;background:var(--separator);transform:scaleY(.5)}
+.row{display:flex;align-items:center;gap:14px;min-height:72px;padding:12px 16px}
+.row.top{align-items:flex-start}
+.tile{--kind:#636366;flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;font-size:18px;font-weight:750;color:#fff;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0) 60%),var(--kind);box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+.tile .i{width:22px;height:22px}
+.tile.soft{color:var(--tint);background:rgba(255,69,58,.14);box-shadow:inset 0 0 0 .5px rgba(255,69,58,.25)}
+.row-text{flex:1;min-width:0;display:grid;gap:2px}
+.row-title{font-size:16px;font-weight:600;line-height:1.3}
+.row-sub{font-size:14px;line-height:1.45;color:var(--label-2)}
+.row-value{flex:none;text-align:right;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.row-value small{display:block;font-size:12px;font-weight:500;color:var(--label-3)}
+
+/* Avisos */
+.note{display:flex;gap:13px;align-items:flex-start;padding:16px 18px;border-radius:20px;background:rgba(255,159,10,.09);box-shadow:inset 0 0 0 .5px rgba(255,159,10,.32)}
+.note>.i{width:22px;height:22px;margin-top:1px;color:var(--orange)}
+.note.good{background:rgba(48,209,88,.09);box-shadow:inset 0 0 0 .5px rgba(48,209,88,.32)}
+.note.good>.i{color:var(--green)}
+.note-text{display:grid;gap:4px;min-width:0}
+.note strong{font-weight:650}
+.note p{color:var(--label-2)}
+
+/* Valor em destaque */
+.value{position:relative;overflow:hidden;isolation:isolate;display:grid;gap:14px;padding:22px 20px 20px;border-radius:26px;background:linear-gradient(150deg,rgba(221,0,0,.5),rgba(80,4,6,.62) 58%,rgba(20,4,5,.75));box-shadow:inset 0 0 0 .5px rgba(255,255,255,.16),0 24px 50px -26px rgba(0,0,0,.95)}
+.value::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.14) 50%,rgba(255,255,255,0) 62%) 100% 0/250% 100% no-repeat;pointer-events:none}
+.value .kicker{color:rgba(252,241,213,.72)}
+.value-big{font-size:clamp(42px,12vw,60px);line-height:1;font-weight:750;letter-spacing:-.035em;font-variant-numeric:tabular-nums;color:var(--cream)}
+.value-big small{font-size:.42em;font-weight:650;letter-spacing:-.01em;color:rgba(252,241,213,.7)}
+.value-sub{font-size:16px;color:rgba(252,241,213,.82);font-variant-numeric:tabular-nums}
+.value-sub b{color:var(--cream);font-weight:650}
+.value .tags{margin-top:2px}
+.value .tag{background:rgba(0,0,0,.24)}
+
+/* Seu projeto: planta */
+.plan-layout{display:grid;gap:18px;align-items:start}
+@media(min-width:640px){.plan-layout{grid-template-columns:minmax(0,300px) minmax(0,1fr)}}
+.plan-wrap{justify-self:center;width:100%;max-width:340px;margin:0;border-radius:16px;background:rgba(0,0,0,.28);padding:12px 8px 6px}
+.hp{display:block;width:100%;height:auto}
+.hp-lot{fill:none;stroke:var(--cream);stroke-width:1.3;stroke-linejoin:round}
+.hp-grass{fill:rgba(48,209,88,.08)}
+.hp-floor{fill:rgba(252,241,213,.05);stroke:rgba(252,241,213,.16);stroke-width:.5}
+.hp-ramp{fill:rgba(163,157,150,.13)}
+.hp-step{fill:rgba(252,241,213,.12);stroke:rgba(252,241,213,.3);stroke-width:.5}
+.hp-paver{fill:rgba(252,241,213,.18)}
+.hp-walls{fill:var(--cream)}
+.hp-social{fill:var(--z-social)}
+.hp-private{fill:var(--z-private)}
+.hp-wet{fill:var(--z-wet)}
+.hp-neutral{fill:#211819}
+.hp-cover{fill:none;stroke:rgba(252,241,213,.55);stroke-width:.7;stroke-dasharray:3 2}
+.hp-double{fill:none;stroke:rgba(255,69,58,.75);stroke-width:.8;stroke-dasharray:3 2}
+.hp-palm{fill:none;stroke:var(--green);stroke-width:.9;stroke-linecap:round}
+.hp-name{fill:var(--label);font:650 8px var(--font)}
+.hp-area{fill:var(--label-2);font:500 6.8px var(--font)}
+.hp-note{fill:var(--tint);font:650 6.2px var(--font)}
+.hp-note.muted{fill:var(--label-3);font-weight:550}
+.hp-out{fill:var(--label-3);font:650 6.4px var(--font);letter-spacing:.08em}
+.hp-dim{fill:var(--label-2);font:650 7px var(--font)}
+.hp-dimline{stroke:var(--label-3);stroke-width:.6}
+.hp-arrow{stroke:var(--label-3);stroke-width:.8}
+.hp-arrow-head{fill:var(--label-3)}
+.hp-trace{fill:none;stroke:#fff1e0;stroke-width:1.8;stroke-linecap:round;stroke-dasharray:.05 .95;stroke-dashoffset:1;opacity:0}
+.zone-key{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--label-2)}
+.zone-key span{display:inline-flex;align-items:center;gap:7px}
+.zone-key i,.rooms .dot{width:12px;height:12px;border-radius:4px;flex:none}
+.z-social{background:var(--z-social);box-shadow:inset 0 0 0 1.5px rgba(252,241,213,.65)}
+.z-private{background:var(--z-private);box-shadow:inset 0 0 0 1.5px var(--tint)}
+.z-wet{background:var(--z-wet);box-shadow:inset 0 0 0 1.5px var(--blue)}
+.rooms{list-style:none;margin:0;padding:0;display:grid}
+.rooms li{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:9px 0;border-top:.5px solid var(--separator);font-size:15px;line-height:1.35}
+.rooms li:first-child{border-top:0;padding-top:2px}
+.rooms .dot{align-self:center}
+.rooms small{display:block;font-size:12.5px;color:var(--label-3)}
+.rooms .val{font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kv{display:grid;margin:0}
+.kv>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0;border-top:.5px solid var(--separator)}
+.kv>div:first-child{border-top:0;padding-top:0}
+.kv dt{color:var(--label-2);font-size:15px}
+.kv dd{margin:0;text-align:right;font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kv .strong dt{color:var(--label);font-weight:600}
+.kv .strong dd{font-size:19px;font-weight:750;color:var(--cream)}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:12px;font-size:13.5px;line-height:1.3;background:var(--fill-2)}
+.pill .i{width:16px;height:16px;color:var(--cream)}
+
+/* Corte esquemático */
+.cut{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;background:rgba(0,0,0,.24)}
+.ct-ground{fill:rgba(252,241,213,.09);stroke:rgba(252,241,213,.6);stroke-width:1}
+.ct-solid{fill:rgba(252,241,213,.88)}
+.ct-space{fill:rgba(252,241,213,.06)}
+.ct-double{fill:rgba(255,69,58,.22)}
+.ct-light{fill:rgba(252,241,213,.03);stroke:rgba(252,241,213,.4);stroke-width:.8;stroke-dasharray:3 2}
+.ct-roof{fill:none;stroke:var(--cream);stroke-width:1.6;stroke-linecap:round}
+.ct-tank{fill:rgba(100,210,255,.32);stroke:rgba(100,210,255,.85);stroke-width:.9}
+.ct-dim{stroke:var(--tint);stroke-width:1.1}
+.ct-arrow-head{fill:var(--tint)}
+.ct-label{fill:var(--label-2);font:600 10px var(--font)}
+.ct-label.muted{fill:var(--label-3);font-size:9px}
+.ct-num{fill:var(--label);font:750 13px var(--font)}
+.ct-num.hot{fill:#ffdcd9}
+
+/* Investimento */
+.calc{display:grid;gap:8px;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
+.calc-cell{display:grid;gap:2px;padding:14px;border-radius:16px;background:var(--fill-2);min-width:0}
+.calc-cell b{font-size:20px;line-height:1.15;font-weight:750;letter-spacing:-.015em;font-variant-numeric:tabular-nums}
+.calc-cell span{font-size:13px;color:var(--label-2)}
+.calc-op{font-size:20px;font-weight:600;color:var(--label-3);text-align:center}
+.calc-total{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 16px;border-radius:16px;background:rgba(221,0,0,.16);box-shadow:inset 0 0 0 1px rgba(255,69,58,.45)}
+.calc-total span{font-size:15px;font-weight:600}
+.calc-total b{font-size:24px;font-weight:750;letter-spacing:-.02em;color:var(--cream);font-variant-numeric:tabular-nums}
+.validity{display:flex;align-items:center;gap:14px}
+.validity .tile{width:52px;height:52px;border-radius:14px}
+.validity-text{display:grid;gap:1px}
+.validity-text strong{font-size:22px;font-weight:750;letter-spacing:-.015em;font-variant-numeric:tabular-nums}
+.validity-text span{font-size:14.5px;color:var(--label-2)}
+
+/* Escopo */
+.later{display:grid;gap:10px}
+.later-row{display:flex;align-items:flex-start;gap:11px;font-size:15.5px;line-height:1.4}
+.later-row .i{margin-top:1px}
+.later-row.ok .i{color:var(--green)}
+.later-row.no .i{color:var(--label-3)}
+.later-row span{color:var(--label-2)}
+.later-row b{color:var(--label);font-weight:650}
+.scope-ok{box-shadow:inset 0 0 0 1px rgba(48,209,88,.35),0 18px 40px -26px rgba(0,0,0,.9)}
+
+/* Próximos passos */
+.steps{list-style:none;margin:0;padding:0;display:grid}
+.step{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding-bottom:24px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:19px;top:46px;bottom:6px;width:2px;background:linear-gradient(180deg,rgba(255,220,215,0) 42%,rgba(255,220,215,.95) 50%,rgba(255,220,215,0) 58%) 0 100%/100% 300% no-repeat,linear-gradient(rgba(255,69,58,.7),rgba(255,69,58,.12))}
+.step:last-child::before{display:none}
+.step-n{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;font-weight:750;font-variant-numeric:tabular-nums;color:var(--tint);background:rgba(255,69,58,.15);box-shadow:inset 0 0 0 1px rgba(255,69,58,.45)}
+.step-n .i{width:20px;height:20px;stroke-width:2.4}
+.step.done .step-n{color:var(--green);background:rgba(48,209,88,.15);box-shadow:inset 0 0 0 1px rgba(48,209,88,.5)}
+.step.done::before{background:linear-gradient(180deg,rgba(48,209,88,.7),rgba(255,69,58,.6))}
+.step-body{display:grid;gap:8px;padding-top:7px;min-width:0}
+.step-body h3{font-size:18px}
+.flag{justify-self:start;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:650;color:var(--orange);background:rgba(255,159,10,.13)}
+.flag.ok{color:var(--green);background:rgba(48,209,88,.13)}
+.versus{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.vs{display:grid;gap:10px;align-content:start;padding:14px;border-radius:16px;background:var(--card);box-shadow:var(--card-edge);min-width:0}
+.vs.pro{background:rgba(70,14,15,.85);box-shadow:inset 0 0 0 1px rgba(255,69,58,.45)}
+.vs-name{font-size:12px;font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--label-3)}
+.vs.pro .vs-name{color:var(--tint)}
+.vs-claim{font-size:17px;line-height:1.3;font-weight:700;letter-spacing:-.01em}
+.vs-claim em{font-style:normal;color:var(--tint)}
+.vs dl{margin:0;display:grid;gap:9px}
+.vs dt{font-size:11.5px;font-weight:650;letter-spacing:.05em;text-transform:uppercase;color:var(--label-3)}
+.vs dd{margin:1px 0 0;font-size:14px;line-height:1.4;color:var(--label-2)}
+.vs.pro dd{color:var(--label)}
+.quote{position:relative;padding:22px 20px;border-radius:22px;background:linear-gradient(150deg,rgba(221,0,0,.5),rgba(80,4,6,.6) 60%,rgba(20,4,5,.7));box-shadow:inset 0 0 0 .5px rgba(255,255,255,.14),0 18px 40px -26px rgba(0,0,0,.9)}
+.quote p{font-size:19px;line-height:1.45;font-weight:600;letter-spacing:-.01em;color:var(--cream);text-wrap:pretty}
+.quote p+p{margin-top:8px}
+.quote .soft{color:rgba(252,241,213,.7)}
+.status{flex:none;align-self:center;display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:650;white-space:nowrap}
+.status.ok{color:var(--green);background:rgba(48,209,88,.13)}
+.status.todo{color:var(--orange);background:rgba(255,159,10,.12)}
+.status .i{width:13px;height:13px;stroke-width:2.4}
+.card.docs{padding-bottom:6px}
+.list.doc-list{margin:0 -18px;border-radius:0;background:transparent;box-shadow:none}
+
+/* Experiência */
+.refs{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.ref{display:flex;align-items:center;gap:12px;padding:12px;border-radius:16px;background:var(--fill-2);min-width:0}
+.ref .tile{width:40px;height:40px;border-radius:11px}
+.ref b{display:block;font-size:16px;font-weight:650;line-height:1.3}
+.ref span{display:block;font-size:13.5px;color:var(--label-2)}
+.condos{display:flex;flex-wrap:wrap;gap:8px}
+.condo{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--cream);background:rgba(252,241,213,.1)}
+.condo .i{width:15px;height:15px}
+.condo.next{position:relative;color:var(--green);background:rgba(48,209,88,.1);box-shadow:inset 0 0 0 1px rgba(48,209,88,.5)}
+.condo.next::after{content:"";position:absolute;inset:-4px;border-radius:inherit;box-shadow:0 0 0 1.5px rgba(48,209,88,.5);opacity:0;pointer-events:none}
+
+/* Próximo passo */
+.cta{display:grid;gap:16px;padding:22px 18px 18px;border-radius:28px;background:rgba(34,20,21,.55);-webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);box-shadow:0 30px 80px -24px rgba(0,0,0,.85),inset 0 1px 1px rgba(255,255,255,.2),inset 0 0 0 .5px rgba(255,255,255,.12)}
+.cta h2{font-size:clamp(26px,6.4vw,32px);line-height:1.12;font-weight:750;letter-spacing:-.022em}
+.cta p{color:var(--label-2)}
+.topics{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.topics li{display:flex;align-items:center;gap:10px;font-size:15.5px}
+.topics .i{color:var(--tint)}
+.primary{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font-size:17px;font-weight:600;letter-spacing:-.01em;color:#fff;text-decoration:none;background:var(--brand) linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0) 58%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(0,0,0,.14),0 12px 26px -12px rgba(221,0,0,.9);transition:transform .3s var(--spring),filter .2s}
+.primary::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(100deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.32) 50%,rgba(255,255,255,0) 65%) 100% 0/250% 100% no-repeat;pointer-events:none}
+.primary:active{transform:scale(.97);filter:brightness(.94)}
+.primary .i{width:22px;height:22px}
+.contact{border-radius:20px;background:rgba(0,0,0,.25);box-shadow:none}
+.contact .row{min-height:66px}
+.copy{flex:none;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;color:var(--tint);background:rgba(255,69,58,.14);transition:transform .25s var(--spring)}
+.copy:active{transform:scale(.9)}
+.copy .i{width:18px;height:18px}
+#c-phone,#c-mail{text-decoration:none}
+#c-mail{overflow-wrap:anywhere}
+.sign{display:flex;align-items:center;gap:14px}
+.sign .app-icon{width:52px;height:52px;border-radius:14px}
+.sign-text{display:grid;gap:1px;min-width:0}
+.sign-text strong{font-size:17px;font-weight:650}
+.sign-text span{font-size:14px;color:var(--label-2)}
+.foot{display:grid;justify-items:center;gap:12px;padding:44px 8px 0;text-align:center}
+.foot .wordmark{--wm-dia:var(--cream);--wm-obra:var(--cream);display:block;width:110px;height:auto;aspect-ratio:2000/1073;opacity:.85}
+.foot p{max-width:48ch;font-size:12.5px;line-height:1.5;color:var(--label-3)}
+
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:30;padding:11px 18px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--label);background:rgba(40,26,27,.8);-webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%);box-shadow:0 18px 40px -16px rgba(0,0,0,.9),inset 0 0 0 .5px rgba(255,255,255,.16);transform:translate(-50%,160%);transition:transform .45s var(--spring);pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.is-on{transform:translate(-50%,0)}
+
+@media(max-width:420px){
+  .card{padding:16px}
+  .vs{padding:12px}
+  .vs-claim{font-size:15.5px}
+  .calc-cell{padding:12px}
+  .calc-cell b{font-size:17px}
+  .contact .tile{display:none}
+  .contact .row{gap:12px;padding:10px 14px}
+  .contact .row-title{font-size:15.5px}
+  .list.doc-list{margin:0 -16px}
+}
+@media(max-width:360px){.versus{grid-template-columns:minmax(0,1fr)}.calc{grid-template-columns:minmax(0,1fr)}.calc-op{line-height:1}}
+@media(prefers-contrast:more){:root{--label-2:rgba(235,235,245,.86);--label-3:rgba(235,235,245,.7);--separator:rgba(255,255,255,.3)}}
+
+@media(prefers-reduced-motion:no-preference){
+  .hero-mark .mark-base path{animation:draw 2.4s cubic-bezier(.65,0,.35,1) .3s both}
+  .hero-mark .mark-base path+path{animation-delay:.55s}
+  .hero-mark .mark-trace{animation:show-in .8s var(--ease) 2.6s both}
+  .hero-mark .mark-trace path{animation:trace 7s linear 2.6s infinite}
+  .hero-mark .mark-trace path+path{animation-delay:1.7s}
+  .value::after{animation:bar-sheen 5s ease-in-out .8s infinite}
+  .hp-trace{opacity:1;animation:trace 8s linear infinite}
+  .ct-double{animation:double-breathe 2.6s ease-in-out infinite alternate}
+  .step::before{animation:flow 3.4s linear infinite}
+  .step:nth-child(3)::before{animation-delay:.85s}
+  .step:nth-child(4)::before{animation-delay:1.7s}
+  .condo.next::after{animation:ring 2.4s var(--ease) infinite}
+  .primary::after{animation:bar-sheen 5s ease-in-out 1.2s infinite}
+}
+@keyframes trace{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes show-in{from{opacity:0}to{opacity:1}}
+@keyframes bar-sheen{0%{background-position:100% 0}55%,100%{background-position:0 0}}
+@keyframes flow{from{background-position:0 100%,0 0}to{background-position:0 0,0 0}}
+@keyframes double-breathe{to{fill:rgba(255,69,58,.4)}}
+@keyframes ring{0%{opacity:.9;transform:scale(.96)}100%{opacity:0;transform:scale(1.12)}}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false"><defs><path id="mg-d" fill-rule="evenodd" d="m1067 124c-9 1-21 5-21 7c0 1 10 10 17 14c4 2 13 8 20 12c17 11 30 20 43 33c50 49 77 122 65 175c-6 26-18 44-39 58c-10 6-19 10-42 16c-31 8-42 13-48 21c-1 2-5 8-8 14l-7 11l-29 1c-85 3-242 4-437 2c-111-1-209-1-236 0l-19 0l0 81l0 81l352 0c336 0 352 0 359 1c13 3 17 8 18 22c2 15 7 21 23 28c17 7 26 12 31 17c7 7 12 18 15 29c3 14 1 63-3 115c-2 21-5 62-5 71l0 7l80 0c44-1 90-1 102-2l23 0l-1-7c0-4 0-28-1-54c-1-26-1-65-2-87c0-22-1-46-1-52l0-11l8-5c22-11 29-18 32-30c2-9 3-13 5-52c7-125 5-194-8-260c-15-70-44-128-87-174c-29-32-47-44-83-59c-45-19-90-28-116-23m-716 979c-1 159 0 290 0 290c0 1 71 1 158 0l157 0l0-81l0-80l-58 0l-58 0l0-208l0-209l-45 0c-25 0-70 0-100-1l-54 0l0 289m762 70l0 62l-129 0c-72 0-130 1-130 1c-1 1-1 23 0 51c1 27 1 62 2 78l0 29l15 1c8 0 60 0 117 0c86 1 106 0 130-1c72-5 100-11 128-30c7-5 21-18 27-26c19-25 29-60 35-112c2-14 3-81 2-99l-1-15l-98 0l-98 0l0 61"/><path id="mg-o" fill-rule="evenodd" d="m1260 939c-33 1-129 1-212 1c-118 0-156 0-166 1c-53 5-87 13-114 27c-46 23-74 60-90 116c-11 39-12 72-12 283c1 133 1 143 3 168c1 14 3 32 4 39c8 51 22 84 47 109c33 34 81 51 163 58c16 1 54 1 262 2c133 1 253 1 266 1c34 0 65-3 91-8c37-6 64-17 90-34c11-7 34-30 41-41c19-29 31-63 35-104c5-45 8-318 4-371c-4-73-14-118-31-152c-10-19-15-26-28-39c-12-12-22-19-37-26c-40-20-94-27-202-29c-16-1-35-1-41-1c-7-1-40 0-73 0m-274 174c-23 1-29 1-67 5c-33 2-39 4-46 9c-9 8-14 28-18 66c-2 25-3 45-1 109c1 25 1 67 1 92c-1 113 0 128 4 142c7 18 17 25 41 28c63 9 372 13 484 6c57-3 82-7 87-14c7-10 12-49 14-123c1-36 1-224-1-251c-1-26-5-38-14-48c-11-11-29-17-62-20c-15-1-385-2-422-1"/></defs><symbol id="wordmark" viewBox="0 0 2000 1073"><path class="wm-dia" fill-rule="evenodd" d="m311 1c-3 0-6 1-7 1c-1 2 2 4 13 10c6 4 14 10 21 16c10 9 10 10 16 21c16 35 17 55 2 71c-8 7-12 9-25 13c-16 4-18 5-22 12c-2 3-4 6-5 7c-3 1-105 2-201 1l-101 0l0 34l0 34l142 0c78 0 146 0 152 0l10 1l1 5c1 3 2 7 2 8c1 3 1 3 17 12c4 2 7 5 9 7c2 4 3 5 2 21c0 14-1 36-3 65l-1 6l44 0c23 0 43 0 43-1c1 0 0-21-1-46c-1-38-1-46 0-46c1-1 4-2 7-4c4-2 6-5 7-7c3-5 5-31 6-59c1-70-13-121-44-152c-20-19-42-29-70-30c-5-1-11 0-14 0m176 209c-5 1-9 4-11 8c-1 3-1 8-2 43c0 22-1 75-1 118c0 97 2 142 5 146c4 4 32 5 55 3c6-1 12-2 12-2c1 0 3-12 4-26c2-20 2-154 1-219c-1-51-1-57-3-62c-1-6-2-6-6-8c-6-1-48-2-54-1m300 0c-14 4-24 15-45 51c-5 7-20 32-35 55c-15 23-40 62-57 87c-16 26-37 57-46 71c-9 13-17 27-18 29c-2 6-3 15-1 20c1 3 1 3 13 4c16 3 32 4 41 2c14-2 24-9 34-24c14-22 32-51 55-87c50-79 73-113 80-119c2-2 2-2 4 1c6 7 15 20 25 35c6 10 32 50 58 91c25 40 49 76 52 81c6 10 11 16 17 19c9 4 23 5 46 3c20-2 20-2 21-6c5-12 3-20-9-38c-19-27-41-60-68-102c-34-53-87-135-97-150c-8-13-13-19-19-21c-4-2-7-2-25-3c-15 0-23 0-26 1m393 0c-6 2-10 5-12 10c-2 3-2 6-3 31l0 28l144 0c139 0 157 0 183 3l6 0l1 10c2 21 3 55 2 101c-1 38-1 47-2 52c-2 6-5 10-10 12l-4 3l-66-1c-123-1-252-1-253 1c-1 1-1 8-1 26c0 28 0 31 5 37c6 6-3 6 167 6c96 0 158 0 164-1c25-3 41-9 53-22c12-12 19-28 21-52c1-14 1-154 0-168c-2-23-9-41-20-52c-11-12-22-18-41-22c-9-2-11-2-169-3c-130 0-161 0-165 1m464 2c-6 2-11 7-12 14c-2 11 0 46 3 50c0 0 4 0 8 1c29 4 91 6 220 4c58 0 109-1 113-2c3 0 10-1 13-2l7-1l2-8c1-6 2-11 1-26c0-17 0-18-2-23c-2-3-4-5-7-7l-4-2l-169 0c-143 0-170 0-173 2m-1632 201l0 121l101 0c55 0 133 0 172-1c68-1 72-1 80-3c19-4 32-14 39-28c7-14 10-29 11-63l0-24l-41 0l-42 0l0 26l0 25l-118 0l-118 0l0-87l0-88l-42 0l-42 0l0 122m1635-80c-8 2-13 6-15 14c-3 12 0 47 3 51c4 3 62 6 141 6c74 0 200-2 208-3c12-2 12-2 14-11c2-8 2-34 1-43c-1-5-5-10-9-13c-3-1-15-1-171-2c-93 0-170 1-172 1m0 127c-6 1-10 4-13 9c-2 4-2 6-3 21c0 15 1 23 3 32l1 4l10 1c28 3 41 4 159 3c130 0 179-1 187-3l5-2l2-7c1-6 2-11 1-25c0-10 0-19-1-22c-1-5-6-9-13-11c-6-1-331-1-338 0"/><path class="wm-obra" fill-rule="evenodd" d="m176 571c-81 1-84 1-102 5c-20 4-37 15-47 28c-10 13-18 36-20 57c-1 6-1 41-1 98c1 95 1 94 6 112c9 30 27 47 56 56c19 6 11 5 158 6c94 0 139 0 146-1c43-4 69-24 80-59c6-18 7-24 8-95c2-94-2-140-14-164c-4-7-11-17-16-22c-11-9-33-16-59-19c-16-2-61-3-91-3c-15 0-62 1-104 1m369 0c-10 0-19 1-21 1c-2 0-3 2-4 22c-1 15 0 39 2 46c1 4 1 4 7 5c3 0 72 0 154 0c148-1 177-1 197 2c8 1 8 1 9 5c3 9 4 27 2 36c0 3-1 4-4 5c-22 6-82 8-240 6c-59-1-111-1-116-1l-9 1l0 29c-1 16-1 33-2 39l0 11l175 0c118 0 178 0 182 1c17 3 24 12 25 36c1 24-5 36-18 40c-2 1-62 1-183 1l-180 0l0 38c-1 21-1 39 0 39c0 0 81 1 180 1c167 0 180-1 191-2c47-7 76-29 87-66c5-14 6-22 6-42c-1-38-6-58-20-74c-7-7-14-16-14-16c0-1 2-4 5-9c14-22 16-32 16-57l0-16l26 0c57-2 232-3 263-3c59 2 92 4 104 7c3 1 4 2 4 4c3 13 4 19 4 44c0 26-1 33-5 49l-1 7l-8 1c-20 3-32 3-78 2c-54-1-117-1-119 0c-2 1-2 1 1 6c6 7 26 27 53 51c13 12 32 30 41 40c45 46 69 68 78 72c5 3 108 1 111-1c0-1 1-2 1-4c1-2 0-4-2-7c-1-2-14-14-29-26c-26-23-55-50-54-51c0-1 20-7 34-11c31-8 49-25 56-51c4-16 5-21 5-66c0-37-1-46-2-56c-9-61-31-80-94-85c-22-2-409-2-437 0c-17 1-24 1-29 0c-3 0-12-1-20-2c-18-1-306-2-330-1m1179 3c-9 1-16 5-21 11c-2 2-9 12-15 22c-10 16-134 207-165 255c-18 28-25 39-26 44c-2 4-2 16 0 19l1 3l29 2c16 1 32 1 35 1c8-1 17-6 22-12c5-5 10-12 21-30c5-7 17-27 28-44c63-98 83-131 90-141c9-15 18-26 23-30c2-2 5-3 5-3c0 0 2 3 3 6c7 14 31 50 101 158c18 27 38 58 44 67c12 19 18 26 25 28c7 2 56 2 64 0c18-6 15-21-8-55c-16-24-22-34-92-142c-86-131-89-136-93-144c-5-8-10-11-16-13c-6-2-46-3-55-2m-1582 76c-21 1-36 2-40 4c-4 1-8 10-10 22c-1 12-2 29-1 106c1 53 1 54 3 59c2 5 7 9 14 11c13 4 204 6 237 2c19-2 24-3 25-5c2-4 3-23 4-53c2-38 1-125-1-130c-2-8-9-13-20-15c-7-1-181-2-211-1"/><path class="wm-tag" fill-rule="evenodd" d="M27 981C17 984 7 993 3 1003C0 1010 0 1022 3 1029C11 1049 36 1058 55 1047L60 1045L60 1039L60 1034L57 1037C51 1042 45 1044 37 1044C31 1044 29 1044 24 1042C15 1037 10 1029 9 1018C9 1011 9 1010 12 1003C17 993 25 988 37 988C44 988 51 990 56 995L60 998L60 993L60 987L53 984C48 981 46 981 39 980C34 980 29 980 27 981ZM225 981C215 985 207 992 202 1002C200 1007 200 1009 200 1016C200 1027 203 1034 210 1042C218 1049 225 1051 237 1052C244 1052 246 1051 251 1049C275 1038 280 1006 261 989C259 988 256 986 252 984C247 981 244 981 238 980C233 980 228 981 225 981ZM227 989C218 993 212 999 209 1007C207 1012 208 1022 210 1027C217 1042 234 1048 249 1041C259 1036 264 1027 264 1016C264 1004 257 993 246 990C241 988 231 988 227 989ZM412.6 1015L412.6 1050L416.6 1050L420.6 1050L420.6 1025L421.6 1000L443.6 1024C456.6 1038 467.6 1049 468.6 1051C470.6 1052 470.6 1051 470.6 1017L470.6 981L466.6 981L462.6 981L462.6 1007L462.6 1034L437.6 1007C424.6 992 413.6 980 412.6 980C412.6 980 412.6 996 412.6 1015ZM622.1 982C615.1 985 611.1 993 613.1 1000C615.1 1008 619.1 1012 630.1 1017C639.1 1020 643.1 1023 644.1 1028C647.1 1037 641.1 1045 632.1 1045C626.1 1045 622.1 1042 619.1 1037L618.1 1032L614.1 1034C610.1 1036 610.1 1036 611.1 1039C612.1 1041 614.1 1044 616.1 1046C626.1 1056 645.1 1053 651.1 1041C654.1 1035 654.1 1027 651.1 1022C649.1 1017 645.1 1014 634.1 1009C624.1 1005 621.1 1002 621.1 996C621.1 991 626.1 987 632.1 987C636.1 987 637.1 988 640.1 991L643.1 994L646.1 992C650.1 990 650.1 989 646.1 986C640.1 980 630.1 978 622.1 982ZM793.4 985L793.4 989L803.4 989L812.4 989L812.4 1020L812.4 1050L817.4 1050L821.4 1050L821.4 1020L821.4 989L831.4 989L840.4 989L840.4 985L840.4 981L817.4 981L793.4 981L793.4 985ZM980.4 1015L980.4 1050L984.4 1050L987.4 1050L987.4 1034C987.4 1024 987.4 1018 988.4 1018C989.4 1018 994.4 1025 1001.4 1034L1013.4 1050L1018.4 1050C1022.4 1050 1023.4 1050 1022.4 1049C1022.4 1048 1017.4 1041 1010.4 1033C999.4 1018 998.4 1017 1004.4 1017C1008.4 1017 1014.4 1013 1016.4 1010C1019.4 1003 1018.4 993 1014.4 988C1010.4 983 1007.4 982 993.4 981L980.4 981L980.4 1015ZM987.4 999L987.4 1011L995.4 1011C1005.4 1011 1009.4 1009 1010.4 1003C1011.4 998 1009.4 993 1006.4 991C1004.4 989 1001.4 989 995.4 988L987.4 988L987.4 999ZM1162.7 1006C1162.7 1033 1163.7 1037 1168.7 1044C1171.7 1048 1177.7 1051 1185.7 1052C1199.7 1053 1208.7 1049 1212.7 1039C1215.7 1034 1215.7 1033 1215.7 1007L1215.7 981L1211.7 981L1207.7 982L1206.7 1008C1206.7 1031 1205.7 1034 1204.7 1037C1200.7 1042 1196.7 1044 1187.7 1044C1179.7 1043 1176.7 1042 1173.7 1035C1171.7 1032 1171.7 1029 1170.7 1006L1170.7 981L1166.7 981L1162.7 981L1162.7 1006ZM1355.7 985L1355.7 989L1365.7 989L1374.7 989L1374.7 1020L1374.7 1050L1379.7 1050L1383.7 1050L1383.7 1020L1383.7 989L1393.7 989L1402.7 989L1402.7 985L1402.7 981L1379.7 981L1355.7 981L1355.7 985ZM1568.1 982C1558.1 985 1548.1 995 1544.1 1005C1542.1 1012 1542.1 1023 1545.1 1030C1549.1 1037 1553.1 1042 1559.1 1046C1574.1 1056 1594.1 1053 1606.1 1040C1614.1 1032 1616.1 1028 1616.1 1016C1616.1 1008 1615.1 1006 1613.1 1001C1610.1 994 1603.1 987 1595.1 983C1588.1 980 1575.1 979 1568.1 982ZM1568.1 990C1550.1 999 1545.1 1021 1559.1 1035C1572.1 1049 1595.1 1046 1605.1 1029C1607.1 1024 1607.1 1022 1607.1 1016C1607.1 1007 1605.1 1000 1599.1 995C1593.1 990 1589.1 989 1581.1 988C1574.1 988 1572.1 988 1568.1 990ZM1756.1 1015L1756.1 1050L1760.1 1050L1763.1 1050L1763.1 1034C1763.1 1024 1763.1 1018 1764.1 1018C1765.1 1018 1770.1 1025 1777.1 1034L1789.1 1050L1794.1 1050C1798.1 1050 1799.1 1050 1798.1 1049C1798.1 1048 1793.1 1041 1786.1 1033C1775.1 1018 1774.1 1017 1780.1 1017C1784.1 1017 1790.1 1013 1792.1 1010C1795.1 1003 1794.1 993 1790.1 988C1786.1 983 1783.1 982 1769.1 981L1756.1 981L1756.1 1015ZM1763.1 999L1763.1 1011L1771.1 1011C1781.1 1011 1785.1 1009 1786.1 1003C1787.1 998 1785.1 993 1782.1 991C1780.1 989 1777.1 989 1771.1 988L1763.1 988L1763.1 999ZM1966 987C1964 990 1959 1003 1953 1016C1947 1030 1941 1042 1941 1043C1940 1044 1939 1047 1939 1048C1938 1050 1938 1050 1942 1050L1946 1050L1951 1040L1955 1030L1968 1029L1982 1029L1986 1040L1990 1050L1995 1050C1998 1050 1999 1050 1999 1049C1998 1048 1992 1035 1985 1019C1978 1003 1971 989 1970 986L1968 982L1966 987ZM1964 1008C1957 1023 1956 1022 1968 1022L1979 1022L1977 1018C1976 1015 1974 1010 1972 1006L1968 999L1964 1008Z"/></symbol><symbol id="monogram" viewBox="326 122 1348 1623"><use class="mg-d" href="#mg-d"/><use class="mg-o" href="#mg-o"/></symbol></svg>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3.5 16.5 16.5 3.5l4 4-13 13z"/><path d="m7.5 12.5 2 2m1-5 1.5 1.5m1-4.5 2 2"/></symbol>
+  <symbol id="i-plan" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="1.5"/><path d="M3.5 12h8v7M11.5 5v4M15 12h5.5"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="12" cy="6.5" rx="7" ry="3"/><path d="M5 6.5v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5M5 11.5v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+  <symbol id="i-found" viewBox="0 0 24 24"><path d="M3 8h18M6 8v12M12 8v12M18 8v12M4.5 20h3M10.5 20h3M16.5 20h3M8 4h8l2 4H6z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9.5 13h6M9.5 17h6"/></symbol>
+  <symbol id="i-stamp" viewBox="0 0 24 24"><path d="M9 13V9.5a3 3 0 1 1 6 0V13"/><path d="M4.5 13h15v4h-15zM6 20.5h12"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/></symbol>
+  <symbol id="i-fence" viewBox="0 0 24 24"><path d="M5 21V7l2-3 2 3v14M15 21V7l2-3 2 3v14M3 10.5h18M3 16.5h18"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M11 7 6 21M13 7l5 14M8.3 15h7.4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12.5 9 5 9-5M3 16.5l9 5 9-5"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.5 7h7M8.5 11h1M14.5 11h1M8.5 14.5h1M14.5 14.5h1M8.5 18h1M14.5 18h1"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2.5 12h2M19.5 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 12h16M12 4v8"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 19.5V5a2 2 0 0 1 2-2h12v15H7a2 2 0 0 0-2 2 2 2 0 0 0 2 2h12"/><path d="M9 7h6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></symbol>
+  <symbol id="i-steps" viewBox="0 0 24 24"><path d="M3 20h5v-5h5v-5h5V5h3"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h10.5l2-8H6.2"/><circle cx="9" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-2.5 6a2.5 2.5 0 0 0 5 0zM19 7l-2.5 6a2.5 2.5 0 0 0 5 0z"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="m3 9 9-5 9 5M5.5 10.5v7M10 10.5v7M14 10.5v7M18.5 10.5v7M3 20.5h18"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.4a8.5 8.5 0 1 1 15.5-4.6z"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-helmet" viewBox="0 0 24 24"><path d="M3.5 17.5h17M5 17.5V15a7 7 0 0 1 14 0v2.5M10 8.3V5.5h4v2.8M12 5.5V11"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5M10 20v-5h4v5"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.5 10h4M14.5 13.5h3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.2v.3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3"/><rect x="4" y="8" width="16.5" height="11.5" rx="2.5"/><path d="M16 13.8h1"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7 20 3M16.5 6.5l2.5 2.5M14.3 8.7l2 2"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 20c0-9 5.5-14.5 15-15.5C19 14 13.5 19.5 5 20z"/><path d="M5 20l8-8"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3.5 20.5h17M6 20.5V4h8v16.5M14 9h4v11.5"/><path d="M9 7.5h2M9 11h2M9 14.5h2"/></symbol>
+</svg>
+
+<div class="wallpaper" aria-hidden="true"><span class="glow glow-a"></span><span class="glow glow-c"></span></div>
+
+<div class="page">
+  <nav class="topbar" aria-label="Seções">
+    <span class="app-icon" aria-hidden="true"><svg viewBox="326 122 1348 1623"><use href="#monogram"/></svg></span>
+    <div class="chips" id="chips">
+      <a href="#resumo">Resumo</a>
+      <a href="#projeto">Projeto</a>
+      <a href="#valor">Valor</a>
+      <a href="#escopo">Escopo</a>
+      <a href="#passos">Próximos passos</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <!-- RESUMO -->
+  <header class="hero sec" id="resumo">
+    <svg class="hero-mark" viewBox="0 0 454 550" aria-hidden="true"><g class="mark-base"><path pathLength="1" d="M317 9C314 9 311 10 310 10C309 11 312 14 323 20C329 24 337 30 344 36C354 45 354 45 360 57C376 91 377 112 362 127C354 134 350 137 337 140C321 144 319 145 315 152C313 156 311 159 310 159C307 161 205 161 109 161L8 160 8 194L8 228 150 228C228 228 296 229 302 229L312 230 313 235C314 238 315 241 315 243C316 245 316 246 332 255C336 257 339 260 341 262C343 266 344 266 343 283C343 296 342 318 340 348L339 354 383 354C406 354 426 353 426 353C427 352 426 332 425 307C424 269 424 261 425 260C426 260 429 258 432 256C436 254 438 252 439 250C442 245 444 218 445 191C446 120 432 70 401 39C381 19 359 10 331 8C326 8 320 8 317 9"/><path pathLength="1" d="M18 420L18 542 119 542C174 541 252 541 291 541C359 540 363 540 371 538C390 533 403 524 410 510C417 495 420 480 421 446L421 423 380 423L338 423 338 448L338 474 220 474L102 474 102 386L102 299 60 299L18 299 18 420"/></g><g class="mark-trace"><path pathLength="1" d="M317 9C314 9 311 10 310 10C309 11 312 14 323 20C329 24 337 30 344 36C354 45 354 45 360 57C376 91 377 112 362 127C354 134 350 137 337 140C321 144 319 145 315 152C313 156 311 159 310 159C307 161 205 161 109 161L8 160 8 194L8 228 150 228C228 228 296 229 302 229L312 230 313 235C314 238 315 241 315 243C316 245 316 246 332 255C336 257 339 260 341 262C343 266 344 266 343 283C343 296 342 318 340 348L339 354 383 354C406 354 426 353 426 353C427 352 426 332 425 307C424 269 424 261 425 260C426 260 429 258 432 256C436 254 438 252 439 250C442 245 444 218 445 191C446 120 432 70 401 39C381 19 359 10 331 8C326 8 320 8 317 9"/><path pathLength="1" d="M18 420L18 542 119 542C174 541 252 541 291 541C359 540 363 540 371 538C390 533 403 524 410 510C417 495 420 480 421 446L421 423 380 423L338 423 338 448L338 474 220 474L102 474 102 386L102 299 60 299L18 299 18 420"/></g></svg>
+    <svg class="wordmark" viewBox="0 0 2000 1073" role="img" aria-label="Dia de Obra Construtora"><use href="#wordmark"/></svg>
+    <p class="eyebrow">Estimativa de investimento · Outubro de 2026</p>
+    <h1>Sua casa no Sunset</h1>
+    <div class="tags">
+      <span class="tag"><svg class="i"><use href="#i-pin"/></svg>Quadra F · Lote 160</span>
+      <span class="tag"><svg class="i"><use href="#i-home"/></svg>Para Emanuel</span>
+    </div>
+    <p class="lead">Olá, Emanuel! Recebemos o projeto arquitetônico da sua casa no <strong>Sunset Residence</strong> e preparamos a estimativa de investimento para construí-la, da fundação à entrega das chaves.</p>
+  </header>
+
+  <div class="sec tight">
+    <div class="value">
+      <p class="kicker">Investimento estimado da obra</p>
+      <p class="value-big">R$ 375.960<small>,00</small></p>
+      <p class="value-sub"><b>115,68&nbsp;m²</b> de área construída × <b>R$&nbsp;3.250,00</b> por&nbsp;m²</p>
+      <div class="tags">
+        <span class="tag"><svg class="i"><use href="#i-key"/></svg>Com entrega das chaves</span>
+        <span class="tag"><svg class="i"><use href="#i-calendar"/></svg>Válido até 14/11/2026</span>
+      </div>
+    </div>
+    <div class="note">
+      <svg class="i"><use href="#i-alert"/></svg>
+      <div class="note-text">
+        <strong>Estimativa, não orçamento definitivo</strong>
+        <p>O valor foi calculado com base no projeto que você enviou, para que você tenha uma visão clara do investimento. Os valores exatos de cada etapa saem da planilha orçamentária detalhada, entregue junto com o contrato de pré-obra.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJETO -->
+  <section class="sec" id="projeto" aria-labelledby="h-proj">
+    <div class="sec-head">
+      <p class="eyebrow">Seu projeto</p>
+      <h2 id="h-proj">A casa que vamos construir</h2>
+      <p>Casa térrea com 115,68 m² de área construída, de frente para a Rua 01, em um lote de 10 m de frente.</p>
+    </div>
+
+    <div class="card">
+      <div class="plan-layout">
+        <figure class="plan-wrap">
+<svg class="hp" viewBox="-18 -16 222 492" role="img" aria-label="Planta baixa esquemática da casa térrea no lote de 10 metros de frente, com a rua embaixo. Na frente ficam a rampa para veículo, a varanda coberta e o jardim. À esquerda, o living com cozinha integrada e, aos fundos, o gourmet. À direita, serviço, quarto, WC social, home office e suíte master com closet e WC. Quintal gramado aos fundos e na lateral direita.">
+<defs>
+<pattern id="hp-dots" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".55" fill="rgba(48,209,88,.6)"/><circle cx="4.5" cy="4.3" r=".45" fill="rgba(48,209,88,.4)"/></pattern>
+<pattern id="hp-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="rgba(252,241,213,.13)" stroke-width="1.2"/></pattern>
+<marker id="hp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="hp-arrow-head"/></marker>
+</defs>
+<line class="hp-dimline" x1="0" y1="-6" x2="199.7" y2="-6"/><line class="hp-dimline" x1="0" y1="-9" x2="0" y2="-3"/><line class="hp-dimline" x1="199.7" y1="-9" x2="199.7" y2="-3"/>
+<text class="hp-dim" x="100" y="-9" text-anchor="middle">10,00 m</text>
+<line class="hp-dimline" x1="-7" y1="6.9" x2="-7" y2="425.1"/><line class="hp-dimline" x1="-10" y1="6.9" x2="-4" y2="6.9"/><line class="hp-dimline" x1="-10" y1="425.1" x2="-4" y2="425.1"/>
+<text class="hp-dim" x="-10" y="216" text-anchor="middle" transform="rotate(-90 -10 216)">20,90 m</text>
+<path class="hp-grass" d="M3 9.8L196.7 3.2V59H3Z M170 59h26.7v212.7H170Z M170 302.8h26.7v122.3H170Z M98.9 357H170v68.1H98.9Z"/>
+<path fill="url(#hp-dots)" d="M3 9.8L196.7 3.2V59H3Z M170 59h26.7v212.7H170Z M170 302.8h26.7v122.3H170Z M98.9 357H170v68.1H98.9Z"/>
+<path class="hp-floor" d="M3 59H170V70.9H3Z M158.7 70.9H170V302.8H158.7Z M170 271.7h26.7v31.1H170Z"/>
+<rect class="hp-ramp" x="3" y="364.9" width="95.9" height="60.2"/>
+<rect class="hp-floor" x="0" y="425.1" width="199.7" height="29.8"/>
+<rect class="hp-step" x="98.9" y="372.9" width="34" height="17.9"/>
+<rect class="hp-step" x="112.8" y="390.8" width="34" height="17.2"/>
+<g class="hp-paver"><rect x="174.1" y="311.6" width="18.8" height="5.9"/><rect x="174.1" y="321.25" width="18.8" height="5.9"/><rect x="174.1" y="330.9" width="18.8" height="5.9"/><rect x="174.1" y="340.55" width="18.8" height="5.9"/><rect x="174.1" y="350.2" width="18.8" height="5.9"/><rect x="174.1" y="359.85" width="18.8" height="5.9"/><rect x="174.1" y="369.5" width="18.8" height="5.9"/><rect x="174.1" y="379.15" width="18.8" height="5.9"/><rect x="174.1" y="388.8" width="18.8" height="5.9"/><rect x="174.1" y="398.45" width="18.8" height="5.9"/><rect x="174.1" y="408.1" width="18.8" height="5.9"/><rect x="174.1" y="417.75" width="18.8" height="5.9"/></g>
+<path class="hp-palm" d="M156.7 378.8L165.7 378.8M156.7 378.8L163.1 385.2M156.7 378.8L156.7 387.8M156.7 378.8L150.3 385.2M156.7 378.8L147.7 378.8M156.7 378.8L150.3 372.4M156.7 378.8L156.7 369.8M156.7 378.8L163.1 372.4"/>
+<path class="hp-lot" d="M0 6.9L199.7 0V425.1H0Z"/>
+<path class="hp-walls" d="M0 70.9H158.7V302.8H170V357H98.9V325.3H57.9V306.1H0Z"/>
+<path class="hp-social" d="M3 306.1H57.9V325.3H98.9V364.9H3Z"/>
+<path fill="url(#hp-hatch)" d="M3 306.1H57.9V325.3H98.9V364.9H3Z"/>
+<line class="hp-cover" x1="3" y1="364.9" x2="98.9" y2="364.9"/>
+<rect class="hp-social" x="3" y="73.5" width="81.9" height="57.7"/>
+<path class="hp-social" d="M3 134.1H84.9V157.3H104.5V183.1H84.9V323.3H61.1V302.8H3Z"/>
+<rect class="hp-private" x="88" y="98.1" width="68.1" height="55.9"/>
+<rect class="hp-private" x="88" y="185.8" width="68.1" height="54.1"/>
+<rect class="hp-private" x="88" y="243.3" width="68.1" height="59.5"/>
+<rect class="hp-private" x="101.9" y="306.1" width="35.9" height="47.6"/>
+<rect class="hp-wet" x="88" y="73.5" width="68.1" height="21.6"/>
+<rect class="hp-wet" x="107.8" y="157.3" width="48.3" height="25.8"/>
+<rect class="hp-wet" x="140.9" y="306.1" width="26" height="47.6"/>
+<rect class="hp-neutral" x="88" y="306.1" width="10.9" height="16"/>
+<rect class="hp-double" x="6" y="203.5" width="75.9" height="96" rx="1"/>
+<path class="hp-trace" pathLength="1" d="M0 70.9H158.7V302.8H170V357H98.9V325.3H57.9V306.1H0Z"/>
+<g text-anchor="middle">
+<text class="hp-out" x="100" y="36">QUINTAL</text>
+<text class="hp-name" x="44" y="99.5">Gourmet</text><text class="hp-area" x="44" y="109">12,30 m²</text>
+<text class="hp-note muted" x="44" y="168">cozinha integrada</text>
+<text class="hp-name" x="44" y="243">Living</text><text class="hp-area" x="44" y="252.5">36,34 m²</text>
+<text class="hp-note" x="44" y="290">pé-direito duplo</text>
+<text class="hp-name" x="122" y="83">Serviço</text><text class="hp-area" x="122" y="91.5">4,08 m²</text>
+<text class="hp-name" x="122" y="123.5">Quarto</text><text class="hp-area" x="122" y="133">9,52 m²</text>
+<text class="hp-name" x="131.9" y="168">WC social</text><text class="hp-area" x="131.9" y="177.5">3,12 m²</text>
+<text class="hp-name" x="122" y="210.5">Home office</text><text class="hp-area" x="122" y="220">9,18 m²</text>
+<text class="hp-name" x="122" y="270.5">Suíte master</text><text class="hp-area" x="122" y="280">10,20 m²</text>
+<text class="hp-name" x="119.8" y="327.5">Closet</text><text class="hp-area" x="119.8" y="337">4,32 m²</text>
+<text class="hp-name" x="153.9" y="327.5">WC</text><text class="hp-area" x="153.9" y="337">3,12</text>
+<text class="hp-name" x="30.5" y="336">Varanda</text><text class="hp-area" x="30.5" y="345.5">12,24 m²</text>
+<text class="hp-out" x="51" y="392">RAMPA</text>
+<text class="hp-out" x="100" y="442.5">PASSEIO</text>
+<text class="hp-out" x="100" y="468">RUA 01</text>
+</g>
+<line class="hp-arrow" x1="51" y1="418" x2="51" y2="399" marker-end="url(#hp-arrow)"/>
+</svg>
+        </figure>
+        <div style="display:grid;gap:14px;min-width:0">
+          <div><p class="kicker">Planta baixa</p><h3>10 ambientes, um pavimento</h3></div>
+          <div class="zone-key" aria-hidden="true"><span><i class="z-social"></i>Área social</span><span><i class="z-private"></i>Área íntima</span><span><i class="z-wet"></i>Áreas molhadas</span></div>
+          <ul class="rooms" aria-label="Ambientes e áreas">
+            <li><span class="dot z-social"></span><span>Living<small>Sala e cozinha integradas</small></span><span class="val">36,34 m²</span></li>
+            <li><span class="dot z-social"></span><span>Gourmet</span><span class="val">12,30 m²</span></li>
+            <li><span class="dot z-social"></span><span>Varanda coberta</span><span class="val">12,24 m²</span></li>
+            <li><span class="dot z-private"></span><span>Suíte master</span><span class="val">10,20 m²</span></li>
+            <li><span class="dot z-private"></span><span>Quarto</span><span class="val">9,52 m²</span></li>
+            <li><span class="dot z-private"></span><span>Home office</span><span class="val">9,18 m²</span></li>
+            <li><span class="dot z-private"></span><span>Closet<small>Da suíte</small></span><span class="val">4,32 m²</span></li>
+            <li><span class="dot z-wet"></span><span>Serviço</span><span class="val">4,08 m²</span></li>
+            <li><span class="dot z-wet"></span><span>WC social</span><span class="val">3,12 m²</span></li>
+            <li><span class="dot z-wet"></span><span>WC suíte</span><span class="val">3,12 m²</span></li>
+          </ul>
+          <dl class="kv">
+            <div><dt>Soma dos ambientes</dt><dd>104,42 m²</dd></div>
+            <div class="strong"><dt>Área construída</dt><dd>115,68 m²</dd></div>
+          </dl>
+          <p class="caption flush">A área construída inclui as paredes e é a base do cálculo do investimento.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div><p class="kicker">Corte esquemático</p><h3>Pé-direito duplo na sala</h3></div>
+      <p>Na sala, o forro fica a 4,45 m do piso. Na cozinha, no gourmet e nos demais ambientes, a 2,70 m. As caixas d'água ficam sobre a laje, em um volume coberto acima da cozinha.</p>
+<svg class="cut" viewBox="0 36 300 124" role="img" aria-label="Corte esquemático da frente para os fundos: a rampa sobe do passeio até a varanda coberta; a sala tem pé-direito de 4,45 metros; a cozinha e o gourmet têm 2,70 metros; as caixas d'água ficam sobre a laje, acima da cozinha.">
+<defs><marker id="ct-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ct-arrow-head"/></marker></defs>
+<rect class="ct-light" x="40.2" y="52.7" width="60" height="44.1"/>
+<rect class="ct-space" x="53.8" y="96.8" width="46.5" height="43.1"/>
+<rect class="ct-double" x="102.3" y="70.1" width="77.2" height="69.8"/>
+<rect class="ct-space" x="180.6" y="97.4" width="53.2" height="42.5"/>
+<rect class="ct-space" x="236" y="97.4" width="45.2" height="42.5"/>
+<rect class="ct-tank" x="194" y="72" width="26" height="16.9" rx="3"/>
+<g class="ct-solid">
+<rect x="100.3" y="52.7" width="2" height="87.2"/>
+<rect x="100.3" y="61.7" width="80.3" height="4.1"/>
+<rect x="179.5" y="49.7" width="1.1" height="47.7"/>
+<rect x="233.8" y="49.7" width="2.2" height="90.2"/>
+<rect x="179.5" y="88.9" width="103.7" height="3"/>
+<rect x="281.2" y="82.1" width="2" height="57.8"/>
+</g>
+<path class="ct-roof" d="M178 50.5L237.5 56"/>
+<path class="ct-ground" d="M0 147.7H8.5L53.8 139.9H281.2V147.4H300V160H0Z"/>
+<line class="ct-dim" x1="110" y1="72" x2="110" y2="138" marker-start="url(#ct-arrow)" marker-end="url(#ct-arrow)"/>
+<g text-anchor="middle">
+<text class="ct-label" x="142" y="98">Sala</text>
+<text class="ct-num hot" x="142" y="114">4,45 m</text>
+<text class="ct-label" x="207.2" y="113">Cozinha</text>
+<text class="ct-num" x="207.2" y="128">2,70 m</text>
+<text class="ct-label" x="258.6" y="121">Gourmet</text>
+<text class="ct-label muted" x="207" y="45">Caixas d'água</text>
+<text class="ct-label" x="77" y="124">Varanda</text>
+<text class="ct-label muted" x="70.2" y="78">Fachada</text>
+<text class="ct-label muted" x="28" y="136">Rampa</text>
+</g>
+</svg>
+      <div class="pills" aria-label="Destaques do projeto">
+        <span class="pill"><svg class="i"><use href="#i-home"/></svg>Casa térrea</span>
+        <span class="pill"><svg class="i"><use href="#i-layers"/></svg>Laje impermeabilizada com platibanda</span>
+        <span class="pill"><svg class="i"><use href="#i-drop"/></svg>2 caixas d'água de 1.000 L</span>
+        <span class="pill"><svg class="i"><use href="#i-steps"/></svg>Rampa de acesso para veículo</span>
+        <span class="pill"><svg class="i"><use href="#i-leaf"/></svg>Jardim e áreas permeáveis</span>
+      </div>
+      <p class="caption flush">Desenhos esquemáticos feitos a partir das pranchas 03 e 04 do projeto do Arq. Hailton Plínio (agosto/2026).</p>
+    </div>
+  </section>
+
+  <!-- VALOR -->
+  <section class="sec" id="valor" aria-labelledby="h-valor">
+    <div class="sec-head">
+      <p class="eyebrow">Investimento</p>
+      <h2 id="h-valor">Como chegamos ao valor</h2>
+      <p>Multiplicamos a área construída do seu projeto pelo valor por m² da obra completa.</p>
+    </div>
+
+    <div class="card">
+      <div class="calc" role="img" aria-label="115,68 metros quadrados vezes R$ 3.250,00 por metro quadrado é igual a R$ 375.960,00">
+        <div class="calc-cell"><b>115,68 m²</b><span>Área construída</span></div>
+        <span class="calc-op" aria-hidden="true">×</span>
+        <div class="calc-cell"><b>R$ 3.250,00</b><span>Valor por m²</span></div>
+        <div class="calc-total"><span>Investimento estimado</span><b>R$ 375.960,00</b></div>
+      </div>
+    </div>
+
+    <div class="note good">
+      <svg class="i"><use href="#i-key"/></svg>
+      <div class="note-text">
+        <strong>Da fundação à entrega das chaves</strong>
+        <p>O valor final inclui a entrega das chaves e a garantia da obra, conforme as condições do contrato.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="validity">
+        <span class="tile soft" aria-hidden="true"><svg class="i"><use href="#i-calendar"/></svg></span>
+        <div class="validity-text"><p class="kicker">Validade da proposta</p><strong>30 dias</strong><span>De 15/10/2026 até 14/11/2026</span></div>
+      </div>
+      <p>Os valores podem ser ajustados em caso de alteração de escopo, revisão do projeto ou variação de mercado nos preços de materiais e serviços.</p>
+    </div>
+  </section>
+
+  <!-- ESCOPO -->
+  <section class="sec" id="escopo" aria-labelledby="h-esc">
+    <div class="sec-head">
+      <p class="eyebrow">Escopo</p>
+      <h2 id="h-esc">O que o valor inclui</h2>
+    </div>
+
+    <div class="grid-2">
+      <div class="card scope-ok">
+        <p class="kicker">Por nossa conta</p>
+        <div class="later">
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Execução da construção</b>, até a entrega das chaves</span></div>
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Compra dos materiais</b></span></div>
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Organização e gestão</b> das equipes de obra</span></div>
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Acompanhamento técnico</b> por engenheira civil responsável</span></div>
+          <div class="later-row ok"><svg class="i"><use href="#i-check"/></svg><span><b>Garantia da obra</b>, conforme o contrato</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <p class="kicker">Fora deste valor</p>
+        <div class="later">
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Projetos complementares</b>, como estrutural, hidrossanitário e elétrico</span></div>
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Projeto de paisagismo</b></span></div>
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Projetos de arquitetura</b> adicionais</span></div>
+          <div class="later-row no"><svg class="i"><use href="#i-x"/></svg><span><b>Taxa da ART de execução</b>, paga pelo proprietário</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMOS PASSOS -->
+  <section class="sec" id="passos" aria-labelledby="h-pas">
+    <div class="sec-head">
+      <p class="eyebrow">Próximos passos</p>
+      <h2 id="h-pas">Do valor estimado ao orçamento definitivo</h2>
+      <p>Seu projeto arquitetônico já está pronto, o que adianta o caminho. A pré-obra fecha os números com precisão antes de a obra começar.</p>
+    </div>
+
+    <div class="card">
+      <ol class="steps">
+        <li class="step done">
+          <span class="step-n"><svg class="i"><use href="#i-check"/></svg></span>
+          <div class="step-body">
+            <h3>Projeto arquitetônico</h3>
+            <span class="flag ok">Pronto</span>
+            <p>Planta baixa, cortes e fachadas do Arq. Hailton Plínio, que serviram de base para esta estimativa.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n">1</span>
+          <div class="step-body">
+            <h3>Compatibilização dos complementares</h3>
+            <span class="flag">Projetos contratados à parte</span>
+            <p>Os projetos estrutural, hidrossanitário e elétrico são elaborados por profissionais indicados pela Dia de Obra. Na pré-obra, fazemos a análise e a compatibilização deles com o arquitetônico, para que nada precise ser refeito na obra.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n">2</span>
+          <div class="step-body">
+            <h3>Aprovações</h3>
+            <p>Junto ao condomínio e à Prefeitura (alvará de construção). Também emitimos a ART de execução da obra.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n">3</span>
+          <div class="step-body">
+            <h3>Planilha orçamentária detalhada</h3>
+            <p>Quantitativos reais, cronograma e valores por etapa, entregues junto com o contrato de pré-obra. É ela que define os números finais da sua obra.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="versus">
+      <div class="vs">
+        <span class="vs-name">Preço por m²</span>
+        <p class="vs-claim">Diz quanto a obra <em>pode</em> custar</p>
+        <dl>
+          <div><dt>Como é feito</dt><dd>Área × valor médio</dd></div>
+          <div><dt>Serve para</dt><dd>Uma visão clara do investimento</dd></div>
+          <div><dt>É o que está</dt><dd>Nesta página</dd></div>
+        </dl>
+      </div>
+      <div class="vs pro">
+        <span class="vs-name">Planilha detalhada</span>
+        <p class="vs-claim">Diz quanto ela <em>vai</em> custar</p>
+        <dl>
+          <div><dt>Como é feito</dt><dd>m² de alvenaria, m³ de concreto, kg de aço, metros de tubulação</dd></div>
+          <div><dt>Serve para</dt><dd>Contratar, executar e medir cada etapa</dd></div>
+          <div><dt>Quando sai</dt><dd>Na pré-obra</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <ul class="list" aria-label="Dúvidas frequentes">
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-steps"/></svg></span><span class="row-text"><span class="row-title">Dá para executar por etapas?</span><span class="row-sub">Sim, trabalhamos assim. Cada etapa tem escopo, prazo e valor próprios.</span></span></li>
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-calendar"/></svg></span><span class="row-text"><span class="row-title">Prazos e pagamento</span><span class="row-sub">Definidos por etapa, com medições conforme o avanço físico da obra.</span></span></li>
+      <li class="row top"><span class="tile soft"><svg class="i"><use href="#i-helmet"/></svg></span><span class="row-text"><span class="row-title">Responsabilidade técnica</span><span class="row-sub">A obra é acompanhada por engenheira civil responsável técnica, do início ao fim.</span></span></li>
+    </ul>
+
+    <div class="card docs">
+      <h3>Para iniciar a pré-obra</h3>
+      <p>Documentos que vamos precisar:</p>
+      <ul class="list doc-list">
+        <li class="row"><span class="tile soft"><svg class="i"><use href="#i-plan"/></svg></span><span class="row-text"><span class="row-title">Projeto arquitetônico</span><span class="row-sub">Planta baixa, cortes e fachadas</span></span><span class="status ok"><svg class="i"><use href="#i-check"/></svg>Recebido</span></li>
+        <li class="row"><span class="tile soft"><svg class="i"><use href="#i-id"/></svg></span><span class="row-text"><span class="row-title">RG e CPF</span><span class="row-sub">Do proprietário e do cônjuge, se houver</span></span><span class="status todo">Enviar</span></li>
+        <li class="row"><span class="tile soft"><svg class="i"><use href="#i-home"/></svg></span><span class="row-text"><span class="row-title">Comprovante de residência</span><span class="row-sub">Atual</span></span><span class="status todo">Enviar</span></li>
+        <li class="row"><span class="tile soft"><svg class="i"><use href="#i-doc"/></svg></span><span class="row-text"><span class="row-title">Escritura ou contrato de compra e venda</span><span class="row-sub">Do lote</span></span><span class="status todo">Enviar</span></li>
+        <li class="row"><span class="tile soft"><svg class="i"><use href="#i-stamp"/></svg></span><span class="row-text"><span class="row-title">Certidão de matrícula atualizada</span><span class="row-sub">Se o lote já estiver registrado</span></span><span class="status todo">Enviar</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section class="sec" id="experiencia" aria-labelledby="h-exp">
+    <div class="sec-head">
+      <p class="eyebrow">Experiência</p>
+      <h2 id="h-exp">Quem já confia na Dia de Obra</h2>
+    </div>
+
+    <div class="card">
+      <p class="kicker">Clientes de referência</p>
+      <div class="refs">
+        <div class="ref"><span class="tile soft" aria-hidden="true"><svg class="i"><use href="#i-drop"/></svg></span><div><b>DESO</b><span>Saneamento de Sergipe</span></div></div>
+        <div class="ref"><span class="tile soft" aria-hidden="true"><svg class="i"><use href="#i-building"/></svg></span><div><b>SESI / SENAI</b><span>Sistema Indústria</span></div></div>
+      </div>
+      <p class="kicker" style="margin-top:6px">Condomínios onde já construímos</p>
+      <div class="condos">
+        <span class="condo"><svg class="i"><use href="#i-pin"/></svg>Alphaville</span>
+        <span class="condo"><svg class="i"><use href="#i-pin"/></svg>Villaredo Barra</span>
+        <span class="condo"><svg class="i"><use href="#i-pin"/></svg>Sol e Praia</span>
+        <span class="condo next"><svg class="i"><use href="#i-pin"/></svg>Sunset · em breve</span>
+      </div>
+      <p>E, em breve, no Sunset, com a aprovação desta estimativa.</p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="sec" id="contato" aria-labelledby="h-cta">
+    <div class="cta">
+      <p class="eyebrow">Próximo passo</p>
+      <h2 id="h-cta">Vamos conversar?</h2>
+      <p>Uma conversa rápida para:</p>
+      <ul class="topics">
+        <li><svg class="i"><use href="#i-chat"/></svg>Tirar suas dúvidas sobre a estimativa</li>
+        <li><svg class="i"><use href="#i-doc"/></svg>Combinar o início da pré-obra</li>
+        <li><svg class="i"><use href="#i-clock"/></svg>Alinhar o prazo desejado para a obra</li>
+      </ul>
+      <a class="primary" href="https://wa.me/5579999526699?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vi%20a%20estimativa%20da%20minha%20casa%20no%20Sunset%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg>Conversar no WhatsApp</a>
+      <ul class="list contact">
+        <li class="row">
+          <span class="tile soft"><svg class="i"><use href="#i-chat"/></svg></span>
+          <span class="row-text"><a class="row-title num" id="c-phone" href="tel:+5579999526699">(79) 99952-6699</a><span class="row-sub">WhatsApp · Fábio Vinícius, comercial</span></span>
+          <button class="copy" type="button" data-copy="(79) 99952-6699" data-target="c-phone" aria-label="Copiar telefone"><svg class="i"><use href="#i-copy"/></svg></button>
+        </li>
+        <li class="row">
+          <span class="tile soft"><svg class="i"><use href="#i-mail"/></svg></span>
+          <span class="row-text"><a class="row-title" id="c-mail" href="mailto:diadeobra.adm@gmail.com">diadeobra.adm@gmail.com</a><span class="row-sub">E-mail</span></span>
+          <button class="copy" type="button" data-copy="diadeobra.adm@gmail.com" data-target="c-mail" aria-label="Copiar e-mail"><svg class="i"><use href="#i-copy"/></svg></button>
+        </li>
+      </ul>
+      <div class="sign">
+        <span class="app-icon" aria-hidden="true"><svg viewBox="326 122 1348 1623"><use href="#monogram"/></svg></span>
+        <div class="sign-text">
+          <strong>Eng.ª Elaine Alfano</strong>
+          <span>Responsável Técnica · CREA-SE nº 13846SE</span>
+          <span>Dia de Obra Construtora</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <svg class="wordmark" viewBox="0 0 2000 1073" aria-hidden="true"><use href="#wordmark"/></svg>
+    <p>Estimativa com base no projeto arquitetônico (pranchas 03 e 04, agosto/2026) e no valor de R$ 3.250,00 por m² de área construída. Válida até 14/11/2026. Os valores definitivos dependem da planilha orçamentária detalhada.</p>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var toast=document.getElementById('toast'),timer;
+  function show(msg){toast.textContent=msg;toast.classList.add('is-on');clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove('is-on')},1900)}
+  function selectText(id){var el=document.getElementById(id);if(!el)return;var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var text=btn.getAttribute('data-copy'),target=btn.getAttribute('data-target');
+      function fallback(){selectText(target);show('Selecionado. Toque e segure para copiar.')}
+      try{
+        if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){show('Copiado')},fallback)}
+        else fallback();
+      }catch(e){fallback()}
+    });
+  });
+
+  var chips=document.getElementById('chips');
+  var links=[].slice.call(chips.querySelectorAll('a'));
+  function setActive(id){
+    links.forEach(function(a){
+      var on=a.getAttribute('href')==='#'+id;
+      if(on){a.setAttribute('aria-current','true');var left=a.offsetLeft-chips.offsetLeft-(chips.clientWidth-a.offsetWidth)/2;chips.scrollTo({left:Math.max(0,left),behavior:'smooth'})}
+      else a.removeAttribute('aria-current');
+    });
+  }
+  setActive('resumo');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting)setActive(e.target.id)});
+    },{rootMargin:'-35% 0px -60% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1));if(s)io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
